@@ -1,5 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import './index.css';
+import * as S from './style';
 
 import '@vonage/video-publisher/video-publisher.js';
 import '@vonage/video-subscribers/video-subscribers.js';
@@ -45,8 +46,8 @@ export default function Home() {
       <header className="App-header">
         <span>Header</span>
       </header>
-      <div className="App-container">
-        <section className="App-section-publisher">
+      <S.Container>
+        <S.SectionPublisher className="App-section-publisher">
           <fieldset>
             <legend>Publisher</legend>
             <video-publisher width="360px" height="240px" ref={publisher}></video-publisher>
@@ -59,14 +60,14 @@ export default function Home() {
           </button>
           <br/><br/>
           <screen-share start-text="start" stop-text="stop" width="300px" height="240px" ref={screenshare}></screen-share>
-        </section>
-        <section className="App-section-subscribers">
+        </S.SectionPublisher>
+        <S.SectionSubscribers className="App-section-subscribers">
           <fieldset>
             <legend>Subscribers</legend>
             <video-subscribers width="360px" height="240px" ref={subscribers}></video-subscribers>
           </fieldset>
-        </section>
-      </div>
+        </S.SectionSubscribers>
+      </S.Container>
     </div>
   );
 }
