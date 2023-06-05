@@ -13,9 +13,9 @@ function App() {
   const screenshare = useRef(null);
 
   // These values normally come from the backend in a production application, but for this demo, they are hardcoded
-  const apiKey = '47721481';
-  const sessionId = '1_MX40NzcyMTQ4MX5-MTY4NTk4ODIyOTcwM34rRU1kZ3dKOEl1Uy9QSVgzVkIyeThGYi9-fn4';
-  const token = 'T1==cGFydG5lcl9pZD00NzcyMTQ4MSZzaWc9Y2FhMDViMjczZWM0ZThmMDk3MjcwNTA2ZmQ0ZmYwZmIyMWQyY2VlYTpzZXNzaW9uX2lkPTFfTVg0ME56Y3lNVFE0TVg1LU1UWTROVGs0T0RJeU9UY3dNMzRyUlUxa1ozZEtPRWwxVXk5UVNWZ3pWa0l5ZVRoR1lpOS1mbjQmY3JlYXRlX3RpbWU9MTY4NTk5MDg5OSZub25jZT0wLjExNTMxMDkxNzU3NjgwMjEyJnJvbGU9cHVibGlzaGVyJmV4cGlyZV90aW1lPTE2ODU5OTQ0OTgmaW5pdGlhbF9sYXlvdXRfY2xhc3NfbGlzdD0=';
+  const apiKey = process.env.API_KEY;
+  const sessionId = process.env.SESSION_ID;
+  const token = process.env.TOKEN;
 
   const toggleVideo = () => {
     publisher.current.toggleVideo();
