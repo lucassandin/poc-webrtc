@@ -1,4 +1,5 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState, useCallback } from 'react';
+import api from '../../services/api';
 import './index.css';
 import * as S from './style';
 
@@ -6,11 +7,13 @@ import '@vonage/video-publisher/video-publisher.js';
 import '@vonage/video-subscribers/video-subscribers.js';
 import '@vonage/screen-share/screen-share.js';
 
+
 export default function Home() {
   // Get references to Web Components
   const publisher = useRef(null);
   const subscribers = useRef(null);
   const screenshare = useRef(null);
+  const [newSession, setNewSession] = useState(null);
 
   // These values normally come from the backend in a production application, but for this demo, they are hardcoded
   const apiKey = process.env.API_KEY;
@@ -25,12 +28,26 @@ export default function Home() {
     publisher.current.toggleAudio();
   };
 
-  useEffect(() => {
-    const OT = window.OT;
+  const handleGetNewSession = useCallback(async () => {
+    try {
+      const response = await api.get(`/session/create`)
+      if (response.data)
+        setNewSession(response.data)
+    } catch (err) {
+      console.log(err)
+    } 
+})
 
+  // useEffect(() => {
+  //     handleGetNewSession()
+  // }, [])
+
+  useEffect(() => {
+    if (newSession == null) return;
+
+    const OT = window.OT;
     // Initialize an OpenTok Session object
     const session = OT.initSession(apiKey, sessionId);
-
     // Set session and token for Web Components
     publisher.current.session = session;
     publisher.current.token = token;
@@ -38,9 +55,8 @@ export default function Home() {
     subscribers.current.token = token;
     screenshare.current.session = session;
     screenshare.current.token = token;
-
   });
-
+  
   return (
     <div className="App">
       <header className="App-header">
