@@ -47,7 +47,6 @@ export default function VideoChamadaCliente() {
               handleUpdateUserSession("usuario", { ...usuarioLogado, ...res.data })
 
               const OT = window.OT;
-              debugger;
               const session = OT.initSession(apiKey, sessionid);
               subscribers.current.session = session; 
               subscribers.current.token = res.data.token;

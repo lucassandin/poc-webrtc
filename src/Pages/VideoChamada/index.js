@@ -21,7 +21,7 @@ export default function VideoChamada() {
   } = useUserContext();
 
   const apiKey = '47721481';
-  const [clipboard, setClipboard] = useState(`http://localhost:3000/primeiro/acesso/${0}`);
+  const [clipboard, setClipboard] = useState(`https://poc-webrtc.vercel.app/primeiro/acesso/${0}`);
 
   const toggleVideo = () => {
     publisher.current.toggleVideo();
@@ -44,7 +44,7 @@ export default function VideoChamada() {
             if (res.data) {
               // atualizar os dados de sessao do usuario
               handleUpdateUserSession("usuario", { ...usuarioLogado, ...res.data })
-              setClipboard(`http://localhost:3000/primeiro/acesso/${res.data.Id}`)
+              setClipboard(`https://poc-webrtc.vercel.app/primeiro/acesso/${res.data.Id}`)
               const OT = window.OT;
               const session = OT.initSession(apiKey, res.data.Id);
               publisher.current.session = session;
