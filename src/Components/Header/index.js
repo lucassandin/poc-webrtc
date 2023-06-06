@@ -16,7 +16,7 @@ export default function Header() {
 
   return (
     <S.Header>
-      {!!headerBack ? (
+      {headerBack ? (
         <S.Button onClick={handleNavite}>
           <img src={setaVoltar} alt="Voltar" />
         </S.Button>

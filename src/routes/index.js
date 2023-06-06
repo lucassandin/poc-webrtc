@@ -13,7 +13,7 @@ const RoutesComponent = () => {
   return (
       <Router>
         <Suspense fallback={<></>}>
-            <Header />
+           <Header />
           <Routes>
 
             <Route path="/" element={<Home />} />
