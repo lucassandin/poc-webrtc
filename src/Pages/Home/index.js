@@ -2,6 +2,8 @@ import React, { useEffect } from "react"
 import { useNavigateContext } from "../../Context/NavigateContext"
 import { useNavigate } from "react-router-dom";
 
+import * as S from './styles';
+
 export default function Home() {
   const navigate = useNavigate();
   const { setHeaderBack } = useNavigateContext();
@@ -11,10 +13,14 @@ export default function Home() {
   })
 
   return (
-    <div>HOME
-      <div>
-        <button onClick={() => navigate("/video/chamada")}>VIDEO CHAMADA BUTTON TEST</button>
-      </div>
-    </div>
+    <S.Content>
+      <S.Title>Seja bem vindo</S.Title>
+
+      <S.Span>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</S.Span>
+      <S.ButtonGroup>
+        <S.Button onClick={() => navigate("/video/chamada")}>Primeiro acesso</S.Button>
+        <S.Button onClick={() => navigate("/video/chamada")}>Já agendei</S.Button>
+      </S.ButtonGroup>
+    </S.Content>
   )
 }
