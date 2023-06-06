@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState, useCallback } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import api from '../../services/api';
 import './index.css';
 import * as S from './style';
@@ -16,9 +16,9 @@ export default function Home() {
   const [newSession, setNewSession] = useState(null);
 
   // These values normally come from the backend in a production application, but for this demo, they are hardcoded
-  const apiKey = process.env.API_KEY;
+  const apiKey = '47721481';
   const sessionId = process.env.SESSION_ID;
-  const token = process.env.TOKEN;
+  // const token = 'T1==cGFydG5lcl9pZD00NzcyMTQ4MSZzaWc9MmZkZTNlYmU3YTJjZDNiYjE1MjJjOWM4ZDQ2NWI0NmM1MmZiZmUwYjpzZXNzaW9uX2lkPTJfTVg0ME56Y3lNVFE0TVg1LU1UWTROakF3TXpFd01EUTNNbjR2WWpkalRqSkhTbUpEVUZaMVFVRTVPRXR2YUVodFdXSi1mbjQmY3JlYXRlX3RpbWU9MTY4NjAwMzEwOSZub25jZT0wLjczNzA2NzExODQ5NTYzODgmcm9sZT1tb2RlcmF0b3ImZXhwaXJlX3RpbWU9MTY4NjAwNjcwOSZpbml0aWFsX2xheW91dF9jbGFzc19saXN0PQ==';
 
   const toggleVideo = () => {
     publisher.current.toggleVideo();
@@ -28,7 +28,7 @@ export default function Home() {
     publisher.current.toggleAudio();
   };
 
-  const handleGetNewSession = useCallback(async () => {
+  const handleGetNewSession = async () => {
     try {
       const response = await api.get(`/session/create`)
       if (response.data)
@@ -36,11 +36,11 @@ export default function Home() {
     } catch (err) {
       console.log(err)
     } 
-})
+}
 
-  // useEffect(() => {
-  //     handleGetNewSession()
-  // }, [])
+  useEffect(() => {
+      handleGetNewSession()
+  }, [])
 
   useEffect(() => {
     if (newSession == null) return;
@@ -48,15 +48,30 @@ export default function Home() {
     const OT = window.OT;
     // Initialize an OpenTok Session object
     const session = OT.initSession(apiKey, sessionId);
+
     // Set session and token for Web Components
     publisher.current.session = session;
-    publisher.current.token = token;
-    subscribers.current.session = session;
-    subscribers.current.token = token;
-    screenshare.current.session = session;
-    screenshare.current.token = token;
+    publisher.current.token = newSession.token;
+
+    // subscribers.current.session = session; 
+    // subscribers.current.token = newSession.token;
+    // screenshare.current.session = session; 
+    // screenshare.current.token = newSession.token;
   });
-  
+
+  useEffect(() => {
+    if (newSession == null) return;
+
+    const OT = window.OT;
+    // Initialize an OpenTok Session object
+    const session = OT.initSession(apiKey, sessionId);
+
+    subscribers.current.session = session; 
+    subscribers.current.token = newSession.token;
+    screenshare.current.session = session; 
+    screenshare.current.token = newSession.token;
+  })
+
   return (
     <div className="App">
       <header className="App-header">
