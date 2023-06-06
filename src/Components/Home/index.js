@@ -17,7 +17,7 @@ export default function Home() {
 
   // These values normally come from the backend in a production application, but for this demo, they are hardcoded
   const apiKey = '47721481';
-  const sessionId = process.env.SESSION_ID;
+  // const sessionId = process.env.SESSION_ID;
   // const token = 'T1==cGFydG5lcl9pZD00NzcyMTQ4MSZzaWc9MmZkZTNlYmU3YTJjZDNiYjE1MjJjOWM4ZDQ2NWI0NmM1MmZiZmUwYjpzZXNzaW9uX2lkPTJfTVg0ME56Y3lNVFE0TVg1LU1UWTROakF3TXpFd01EUTNNbjR2WWpkalRqSkhTbUpEVUZaMVFVRTVPRXR2YUVodFdXSi1mbjQmY3JlYXRlX3RpbWU9MTY4NjAwMzEwOSZub25jZT0wLjczNzA2NzExODQ5NTYzODgmcm9sZT1tb2RlcmF0b3ImZXhwaXJlX3RpbWU9MTY4NjAwNjcwOSZpbml0aWFsX2xheW91dF9jbGFzc19saXN0PQ==';
 
   const toggleVideo = () => {
@@ -47,7 +47,7 @@ export default function Home() {
 
     const OT = window.OT;
     // Initialize an OpenTok Session object
-    const session = OT.initSession(apiKey, sessionId);
+    const session = OT.initSession(apiKey, '2_MX40NzcyMTQ4MX5-MTY4NjAwMzEwMDQ3Mn4vYjdjTjJHSmJDUFZ1QUE5OEtvaEhtWWJ-fn4');
 
     // Set session and token for Web Components
     publisher.current.session = session;
@@ -64,7 +64,7 @@ export default function Home() {
 
     const OT = window.OT;
     // Initialize an OpenTok Session object
-    const session = OT.initSession(apiKey, sessionId);
+    const session = OT.initSession(apiKey, '2_MX40NzcyMTQ4MX5-MTY4NjAwMzEwMDQ3Mn4vYjdjTjJHSmJDUFZ1QUE5OEtvaEhtWWJ-fn4');
 
     subscribers.current.session = session; 
     subscribers.current.token = newSession.token;
