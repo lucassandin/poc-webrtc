@@ -1,19 +1,21 @@
 import React, { useRef, useEffect, useState } from 'react';
 import api from '../../services/api';
 import './index.css';
-import * as S from './style';
+import * as S from './styles';
 
 import '@vonage/video-publisher/video-publisher.js';
 import '@vonage/video-subscribers/video-subscribers.js';
 import '@vonage/screen-share/screen-share.js';
+import { useNavigateContext } from '../../Context/NavigateContext';
 
-
-export default function Home() {
+export default function VideoChamada() {
   // Get references to Web Components
   const publisher = useRef(null);
   const subscribers = useRef(null);
   const screenshare = useRef(null);
   const [newSession, setNewSession] = useState(null);
+
+  const { setHeaderBack } = useNavigateContext();
 
   // These values normally come from the backend in a production application, but for this demo, they are hardcoded
   const apiKey = '47721481';
@@ -36,7 +38,12 @@ export default function Home() {
     } catch (err) {
       console.log(err)
     } 
-}
+  }
+  
+
+  useEffect(() => {
+    setHeaderBack(true)
+  })
 
   useEffect(() => {
       handleGetNewSession()
@@ -74,11 +81,8 @@ export default function Home() {
 
   return (
     <div className="App">
-      <header className="App-header">
-        <span>Header</span>
-      </header>
       <S.Container>
-        <S.SectionPublisher className="App-section-publisher">
+        <S.SectionPublisher>
           <fieldset>
             <legend>Publisher</legend>
             <video-publisher width="360px" height="240px" ref={publisher}></video-publisher>
@@ -92,7 +96,7 @@ export default function Home() {
           <br/><br/>
           <screen-share start-text="start" stop-text="stop" width="300px" height="240px" ref={screenshare}></screen-share>
         </S.SectionPublisher>
-        <S.SectionSubscribers className="App-section-subscribers">
+        <S.SectionSubscribers>
           <fieldset>
             <legend>Subscribers</legend>
             <video-subscribers width="360px" height="240px" ref={subscribers}></video-subscribers>

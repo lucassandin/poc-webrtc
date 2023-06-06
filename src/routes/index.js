@@ -5,17 +5,22 @@ import {
 } from 'react-router-dom'
 import { Suspense } from 'react'
 import NotFound from "../Components/NotFound"; 
-import Home from "../Components/Home";
+import Header from "../Components/Header"
+import Home from "../Pages/Home";
+import VideoChamada from "../Pages/VideoChamada";
 
 const RoutesComponent = () => {
   return (
       <Router>
-          <Suspense fallback={<></>}>
-              <Routes>
-                  <Route path="/" element={<Home />} />
-                  <Route path="*" element={<NotFound />} />
-              </Routes>
-          </Suspense>
+        <Suspense fallback={<></>}>
+            <Header />
+          <Routes>
+
+            <Route path="/" element={<Home />} />
+            <Route path="/video/chamada" element={<VideoChamada />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </Suspense>
       </Router>
   )
 }
