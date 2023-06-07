@@ -12,27 +12,6 @@ export const ButtonGroup = styled.div`
   flex-wrap: wrap;
   gap: 3rem;
   margin-top: 10rem;
-
-  @media (max-width: 820px) {
-    position: fixed;
-    bottom: 1rem;
-    width: 89vw;
-    resize: vertical;
-    overflow: auto;
-    max-width: 100% !important;
-  }
-
-  @media (min-width: 820px) and (max-width: 1024px) {
-    display: inherit;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 3rem;
-    margin-top: 14rem;
-    width: 95vw;
-    resize: vertical;
-    overflow: auto;
-    max-width: 100%!important;
-  }
 `;
 
 export const Button = styled.button`
