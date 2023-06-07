@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { CopyToClipboard } from 'react-copy-to-clipboard';
+import React, { useEffect, useRef } from 'react';
+import { useParams } from "react-router-dom";
 import api from '../../services/api';
 import './index.css';
 import * as S from './styles';
@@ -14,14 +14,13 @@ export default function VideoChamada() {
   const { setHeaderBack } = useNavigateContext();
   const { 
     handleGetUserSession, 
-    handleUpdateUserSession,
-    publisher,
-    subscribers,
-    screenshare
   } = useUserContext();
 
+  const publisher = useRef(null);
+  const subscribers = useRef(null);
+  const screenshare = useRef(null);
   const apiKey = '47721481';
-  const [clipboard, setClipboard] = useState(`https://poc-webrtc.vercel.app/primeiro/acesso/${0}`);
+  const { sessionid } = useParams();
 
   const toggleVideo = () => {
     publisher.current.toggleVideo();
@@ -31,38 +30,45 @@ export default function VideoChamada() {
     publisher.current.toggleAudio();
   };
 
+  // eslint-disable-next-line
+  const handleT = () => {
+    try {
+      api.get(`/session/create/publisher`)
+        .then(res => {
+          if (res.data) {
+          }
+        })
+    } catch (error) {
+      console.log("erro :: ", error)
+    }
+  }
+
   useEffect(() => {
     setHeaderBack(true)
   })
  
   useEffect(() => {
-    const usuarioLogado = handleGetUserSession("usuario");
-    if (usuarioLogado.type === "operador") {
-      try {
-        api.get(`/session/create/publisher`)
-          .then(res => {
-            if (res.data) {
-              // atualizar os dados de sessao do usuario
-              handleUpdateUserSession("usuario", { ...usuarioLogado, ...res.data })
-              setClipboard(`https://poc-webrtc.vercel.app/primeiro/acesso/${res.data.Id}`)
-              const OT = window.OT;
-              const session = OT.initSession(apiKey, res.data.Id);
-              publisher.current.session = session;
-              publisher.current.token = res.data.Token;
-            }
-          })
-      } catch (error) {
-        console.log("erro :: ", error)
-      }
+    try {
+      const OT = window.OT;
+      const session = OT.initSession(apiKey, sessionid);
+      publisher.current.session = session;
+      publisher.current.token = session.token;
+      subscribers.current.session = session; 
+      subscribers.current.token = session.token; 
+      screenshare.current.session = session; 
+      screenshare.current.token = session.token; 
+    } catch (error) {
+      console.log("erro :: ", error)
     }
-  }, [publisher, handleGetUserSession, handleUpdateUserSession]);
+
+    console.log(publisher)
+    console.log(subscribers)
+    console.log(screenshare)
+  }, [handleGetUserSession, sessionid]);
 
   return (
     <div className="App">
       <S.Container>
-        <CopyToClipboard text={clipboard}>
-          <button>Copy to clipboard with button</button>
-        </CopyToClipboard>
         <S.SectionPublisher>
           <fieldset>
             <legend>Publisher</legend>

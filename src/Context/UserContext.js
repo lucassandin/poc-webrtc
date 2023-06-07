@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, useRef } from 'react'
+import React, { createContext, useContext, useState } from 'react'
 
 const UserContext = createContext(null)
 
@@ -6,10 +6,6 @@ export const UserProvider = ({ children }) => {
   const [user, setUser] = useState({
     type: ""
   });
-
-  const publisher = useRef(null);
-  const subscribers = useRef(null);
-  const screenshare = useRef(null);
 
   const handleCreateUserSession = (user, data) => {
     localStorage.setItem(user, JSON.stringify(data));
@@ -29,10 +25,7 @@ export const UserProvider = ({ children }) => {
         setUser, 
         handleCreateUserSession, 
         handleGetUserSession, 
-        handleUpdateUserSession,
-        publisher,
-        subscribers,
-        screenshare
+        handleUpdateUserSession
       }}>
       {children}
     </UserContext.Provider>
