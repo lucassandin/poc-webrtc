@@ -12,6 +12,7 @@ export const ButtonGroup = styled.div`
   flex-wrap: wrap;
   gap: 3rem;
   margin-top: 10rem;
+  margin-bottom: 2rem;
 `;
 
 export const Button = styled.button`
