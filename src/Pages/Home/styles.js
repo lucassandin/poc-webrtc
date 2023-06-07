@@ -11,7 +11,7 @@ export const ButtonGroup = styled.div`
   justify-content: center;
   flex-wrap: wrap;
   gap: 3rem;
-  margin-top: 10rem;
+  margin-top: 5rem;
   margin-bottom: 2rem;
 `;
 
