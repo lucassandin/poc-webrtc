@@ -18,7 +18,7 @@ export default function Home() {
 
       <S.ButtonGroup>
         <S.Button onClick={() => navigate(`/video/chamada`)}>Operador</S.Button>
-        <S.Button onClick={() => navigate(`/primeiro/acesso`)}>Cliente</S.Button>
+        <S.Button onClick={() => navigate(`/seja-bem-vindo`)}>Cliente</S.Button>
       </S.ButtonGroup>
     </S.Content>
   )
