@@ -8,6 +8,7 @@ import NotFound from "../Components/NotFound";
 import Header from "../Components/Header"
 import Home from "../Pages/Home";
 import VideoChamada from "../Pages/VideoChamada";
+import ChamadaDeVideo from '../Pages/ChamadaDeVideo';
 import SejaBemVindo from "../Pages/SejaBemVindo";
 // fluxo de agendamento INIT
 import TitularBeneficiario from "../Pages/TitularBeneficiario"; // 1 ok
@@ -25,6 +26,9 @@ import DocumentosRecebidos from "../Pages/DocumentosRecebidos"; // 12 ok
 import ConfirmacaoAgendamento from "../Pages/ConfirmacaoAgendamento"; // 13 ok
 // fluxo de agendamento END
 
+// operador create session
+import Sessoes from "../Pages/Sessoes";
+
 const RoutesComponent = () => {
   return (
       <Router>
@@ -32,7 +36,8 @@ const RoutesComponent = () => {
            <Header />
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/video/chamada" element={<VideoChamada />} />
+            <Route path="/video/chamada/:sessionid" element={<VideoChamada />} />
+            <Route path="/chamada-de-video/:sessionid" element={<ChamadaDeVideo />} />
             <Route path="/seja-bem-vindo" element={<SejaBemVindo />} />
 
             {/* // fluxo de agendamento INIT */}
@@ -50,6 +55,10 @@ const RoutesComponent = () => {
             <Route path="/agendamento/documentos-recebidos" element={<DocumentosRecebidos />} />
             <Route path="/agendamento/confirmacao-agendamento" element={<ConfirmacaoAgendamento />} />
             {/* // fluxo de agendamento END */}
+
+            {/* create session operador */}
+            <Route path="/operador/sessions" element={<Sessoes />} />
+
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>
