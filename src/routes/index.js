@@ -37,7 +37,7 @@ const RoutesComponent = () => {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/video/chamada/:sessionid" element={<VideoChamada />} />
-            <Route path="/chamada-de-video/:sessionid" element={<ChamadaDeVideo />} />
+            <Route path="/chamada-de-video" element={<ChamadaDeVideo />} />
             <Route path="/seja-bem-vindo" element={<SejaBemVindo />} />
 
             {/* // fluxo de agendamento INIT */}

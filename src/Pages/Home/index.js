@@ -17,7 +17,7 @@ export default function Home() {
       <S.Title>Login</S.Title>
 
       <S.ButtonGroup>
-        <S.Button onClick={() => navigate(`/operador/sessions`)}>Operador</S.Button>
+        <S.Button onClick={() => navigate(`/chamada-de-video`)}>Chamada de vídeo</S.Button>
         <S.Button onClick={() => navigate(`/seja-bem-vindo`)}>Cliente</S.Button>
       </S.ButtonGroup>
     </S.Content>
