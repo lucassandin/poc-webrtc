@@ -22,7 +22,7 @@ export default function SejaBemVindo() {
         <S.Button onClick={() => navigate(`/agendamento/titular-beneficiario`)}>Primeiro acesso</S.Button>
 
         {/* direcionar para a tela direta de orientações */}
-        <S.Button onClick={() => navigate(`/video/chamada`)}>Já agendei</S.Button>
+        <S.Button onClick={() => navigate(`/agendamento/orientacoes`)}>Já agendei</S.Button>
       </S.ButtonGroup>
     </S.Content>
   )

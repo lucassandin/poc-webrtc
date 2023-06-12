@@ -32,7 +32,11 @@ export default function ReconhecimentoFacial() {
       </S.Span>
 
       <S.ButtonGroup>
-        <S.Button onClick={() => navigate(`/agendamento/recomendacao-anexo`)}>Enviar</S.Button>
+        {/* <S.Button onClick={() => navigate(`/agendamento/recomendacao-anexo`)}>Enviar</S.Button> */}
+
+
+
+        <S.Button onClick={() => navigate(`/agendamento/testeconexao`)}>Enviar</S.Button>
       </S.ButtonGroup>
     </S.Content>
   )
