@@ -1,0 +1,22 @@
+video-subscribers {
+  display: flex;
+}
+
+.OT_publisher {
+  max-width: 70vw !important;
+  margin: 0 auto;
+  height: 30vh !important;
+
+  border: 4px solid #000000;
+  border-radius: 4px;
+}
+
+.OT_subscriber  {
+  width: 100% !important;
+  max-width: 70vw !important;
+  height: 30vh !important;
+  margin: 0 auto;
+
+  border: 4px solid #000000;
+  border-radius: 4px;
+}
