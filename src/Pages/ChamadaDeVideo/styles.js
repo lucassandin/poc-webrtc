@@ -1,12 +1,9 @@
 import { styled } from "styled-components";
 
 export const Content = styled.div`
-  /* display: flex;
-  flex-direction: column; */
+  display: flex;
+  flex-direction: column;
 
-  &.OT_mirrored .OT_root .OT_publisher .OT_fit-mode-cover {
-    height: 240px;
-  }
 `;
 
 export const ButtonGroup = styled.div`
@@ -14,7 +11,7 @@ export const ButtonGroup = styled.div`
   justify-content: center;
   gap: 3rem;
   z-index: 10;
-  margin-top: 2rem;
+  margin: 2rem 0;
 `;
 
 export const Button = styled.button`
@@ -59,11 +56,36 @@ export const Span = styled.span`
 `;
 
 export const VideoGroup = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 `;
 
 export const VideoContent = styled.div`
+  position: relative;
+  
 `;
 
 export const Footer = styled.div`
   
+`;
+
+export const Tipo = styled.div`
+display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  background: rgba(0, 0, 0, 0.88);
+  border-radius: 4.40789px 0px 0px 0px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 29px;
+  color: #FFFFFF;
+  width: 10rem;
+  height: 3rem;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  right: 0px;
 `;

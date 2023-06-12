@@ -10,6 +10,7 @@ import video from "../../Assets/video.png";
 import microfone from "../../Assets/microfone.png";
 import encerrar from "../../Assets/encerrar-chamada.png";
 import * as S from "./styles";
+import './style.css';
 
 export default function ChamadaDeVideo() {
   const navigate = useNavigate();
@@ -53,24 +54,40 @@ export default function ChamadaDeVideo() {
 
   return (
     <S.Content>
-        <video-publisher 
-          // width="300px" 
-          height="240px" 
-          ref={publisher}
-        ></video-publisher>
+      <S.VideoGroup>
+        <S.VideoContent>
+          <video-publisher 
+            // width="300px" 
+            // height="240px" 
+            ref={publisher}
+          >
+          </video-publisher>
 
-        <video-subscribers 
-          // width="300px" 
-          height="240px" 
-          ref={subscribers}
-        ></video-subscribers>
-        {/* <screen-share start-text="start" stop-text="stop" width="300px" height="240px" ref={screenshare}></screen-share> */}
+          {/* <S.Tipo>
+            <div>Você</div>
+          </S.Tipo> */}
+        </S.VideoContent>
 
-        <S.ButtonGroup>
-          <S.ButtonMedia onClick={toggleAudio}><img src={microfone} alt="Microfone" /></S.ButtonMedia>
-          <S.ButtonMedia onClick={() => navigate("/")}><img src={encerrar} alt="Encerrar" /></S.ButtonMedia>
-          <S.ButtonMedia onClick={toggleVideo}><img src={video} alt="Vídeo" /></S.ButtonMedia>
-        </S.ButtonGroup>
-    </S.Content>
+        <S.VideoContent>
+          <video-subscribers 
+            // width="300px" 
+            // height="240px" 
+            ref={subscribers}
+          ></video-subscribers>
+
+          {/* <S.Tipo>
+            <div>Operador</div>
+          </S.Tipo> */}
+        </S.VideoContent>
+      </S.VideoGroup>
+
+      {/* <screen-share start-text="start" stop-text="stop" width="300px" height="240px" ref={screenshare}></screen-share> */}
+
+      <S.ButtonGroup>
+        <S.ButtonMedia onClick={toggleAudio}><img src={microfone} alt="Microfone" /></S.ButtonMedia>
+        <S.ButtonMedia onClick={() => navigate("/")}><img src={encerrar} alt="Encerrar" /></S.ButtonMedia>
+        <S.ButtonMedia onClick={toggleVideo}><img src={video} alt="Vídeo" /></S.ButtonMedia>
+      </S.ButtonGroup>
+  </S.Content>
   );
 }
