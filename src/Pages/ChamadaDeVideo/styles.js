@@ -9,8 +9,9 @@ export const Content = styled.div`
 export const ButtonGroup = styled.div`
   display: inherit;
   justify-content: center;
-  flex-wrap: wrap;
   gap: 3rem;
+  position: absolute;
+  bottom: 30px !important;
 `;
 
 export const Button = styled.button`
@@ -20,6 +21,16 @@ export const Button = styled.button`
   border-radius: 4px;
   border: none;
   color: #fff;
+`;
+
+export const ButtonMedia = styled.button`
+  border-radius: 15rem;
+  border: none;
+  color: #fff;
+  padding: 1rem;
+  width: 80px;
+  height: 80px;
+  background: #D9D9D9;
 `;
 
 export const Title = styled.span`
@@ -44,37 +55,12 @@ export const Span = styled.span`
   white-space: nowrap;
 `;
 
-export const SessionGroup = styled.div`
+export const VideoGroup = styled.div`
   display: inherit;
   justify-content: center;
   flex-direction: column;
-  flex-wrap: wrap;
-  gap: 1rem;
 `;
 
-export const Sessions = styled.div`
-  background: #000000;
-  border-radius: 4px;
-  border: none;
-  color: #fff;
-  padding: 1rem 1rem;
-  display: inherit;
-`;
-
-export const ButtonClipBoard = styled.button`
-  border: none;
-  padding: 0.5rem 1rem;
-`;
-
-export const InputContent = styled.div`
-  display: inherit;
-  flex-direction: column;
-  gap: 3vh;
-  margin-top: 30px;
-`;
-
-export const InputGroupd = styled.div`
-  display: inherit;
-  flex-direction: column;
-  position: relative;
+export const VideoContent = styled.div`
+  border: solid 1px red;
 `;
