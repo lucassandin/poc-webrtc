@@ -16,7 +16,7 @@ export default function ChamadaDeVideo() {
   const { setHeaderBack } = useNavigateContext();
 
   useEffect(() => {
-    setHeaderBack(false)
+    setHeaderBack(true)
   }) 
   // Get references to Web Components
   const publisher = useRef(null);
@@ -53,26 +53,24 @@ export default function ChamadaDeVideo() {
 
   return (
     <S.Content>
-      <S.VideoGroup>
-        <S.VideoContent>
-          <video-publisher 
-            ref={publisher}
-            width="360px" height="240px" 
-            // style={{
-            //   width: "360px",
-            //   height: "240px"
-            // }}
-          ></video-publisher>
-        </S.VideoContent>
-      </S.VideoGroup>
-      <video-subscribers width="360px" height="240px" ref={subscribers}></video-subscribers>
+        <video-publisher 
+          // width="300px" 
+          height="240px" 
+          ref={publisher}
+        ></video-publisher>
 
-      {/* <screen-share start-text="start" stop-text="stop" width="300px" height="240px" ref={screenshare}></screen-share> */}
-      <S.ButtonGroup>
-        <S.ButtonMedia onClick={toggleAudio}><img src={microfone} alt="Microfone" /></S.ButtonMedia>
-        <S.ButtonMedia onClick={() => navigate("/")}><img src={encerrar} alt="Encerrar" /></S.ButtonMedia>
-        <S.ButtonMedia onClick={toggleVideo}><img src={video} alt="Vídeo" /></S.ButtonMedia>
-      </S.ButtonGroup>
+        <video-subscribers 
+          // width="300px" 
+          height="240px" 
+          ref={subscribers}
+        ></video-subscribers>
+        {/* <screen-share start-text="start" stop-text="stop" width="300px" height="240px" ref={screenshare}></screen-share> */}
+
+        <S.ButtonGroup>
+          <S.ButtonMedia onClick={toggleAudio}><img src={microfone} alt="Microfone" /></S.ButtonMedia>
+          <S.ButtonMedia onClick={() => navigate("/")}><img src={encerrar} alt="Encerrar" /></S.ButtonMedia>
+          <S.ButtonMedia onClick={toggleVideo}><img src={video} alt="Vídeo" /></S.ButtonMedia>
+        </S.ButtonGroup>
     </S.Content>
   );
 }

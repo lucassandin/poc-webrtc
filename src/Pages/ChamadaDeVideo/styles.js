@@ -1,17 +1,20 @@
 import { styled } from "styled-components";
 
 export const Content = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  /* display: flex;
+  flex-direction: column; */
+
+  &.OT_mirrored .OT_root .OT_publisher .OT_fit-mode-cover {
+    height: 240px;
+  }
 `;
 
 export const ButtonGroup = styled.div`
-  display: inherit;
+  display: flex;
   justify-content: center;
   gap: 3rem;
-  position: absolute;
-  bottom: 30px !important;
+  z-index: 10;
+  margin-top: 2rem;
 `;
 
 export const Button = styled.button`
@@ -56,11 +59,11 @@ export const Span = styled.span`
 `;
 
 export const VideoGroup = styled.div`
-  display: inherit;
-  justify-content: center;
-  flex-direction: column;
 `;
 
 export const VideoContent = styled.div`
-  border: solid 1px red;
+`;
+
+export const Footer = styled.div`
+  
 `;
