@@ -25,9 +25,9 @@ export default function ChamadaDeVideo() {
   // const screenshare = useRef(null);
 
   // These values normally come from the backend in a production application, but for this demo, they are hardcoded
-  const apiKey = '47721481';
-  const sessionId = '1_MX40NzcyMTQ4MX5-MTY4NjU3MjUxNDMzN35LMEVyYzhHMnpLbWgramJJbS9TVmdEZE5-UH5-';
-  const token = 'T1==cGFydG5lcl9pZD00NzcyMTQ4MSZzaWc9YmY1YmFhODIxZDVjZGIxMTI1NTkxMDMxOTA5NDFmMmQyNzVkZWY2MzpzZXNzaW9uX2lkPTFfTVg0ME56Y3lNVFE0TVg1LU1UWTROalUzTWpVeE5ETXpOMzVMTUVWeVl6aEhNbnBMYldncmFtSkpiUzlUVm1kRVpFNS1VSDUtJmNyZWF0ZV90aW1lPTE2ODY1NzYzODMmbm9uY2U9MC42MDAzOTU4OTA0NTM5ODM0JnJvbGU9cHVibGlzaGVyJmV4cGlyZV90aW1lPTE2ODY1OTc5ODImaW5pdGlhbF9sYXlvdXRfY2xhc3NfbGlzdD0=';
+  const apiKey = process.env.REACT_APP_API_KEY;
+  const sessionId = process.env.REACT_APP_SESSION_ID;
+  const token = process.env.REACT_APP_TOKEN;
 
   const toggleVideo = () => {
     publisher.current.toggleVideo();
