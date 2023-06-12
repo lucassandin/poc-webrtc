@@ -26,7 +26,7 @@ export default function ChamadaDeVideo() {
   // These values normally come from the backend in a production application, but for this demo, they are hardcoded
   const apiKey = '47721481';
   const sessionId = '1_MX40NzcyMTQ4MX5-MTY4NjU3MjUxNDMzN35LMEVyYzhHMnpLbWgramJJbS9TVmdEZE5-UH5-';
-  const token = 'T1==cGFydG5lcl9pZD00NzcyMTQ4MSZzaWc9MTBlNmVlOTBiMDg5YWU3MmY4ZTUzOTEyYzMyYmZjYWY4YzViMThmNTpzZXNzaW9uX2lkPTFfTVg0ME56Y3lNVFE0TVg1LU1UWTROalUzTWpVeE5ETXpOMzVMTUVWeVl6aEhNbnBMYldncmFtSkpiUzlUVm1kRVpFNS1VSDUtJmNyZWF0ZV90aW1lPTE2ODY1NzI1ODYmbm9uY2U9MC44NjU3NjkwNjYxODYyMzk0JnJvbGU9cHVibGlzaGVyJmV4cGlyZV90aW1lPTE2ODY1NzYxODYmaW5pdGlhbF9sYXlvdXRfY2xhc3NfbGlzdD0=';
+  const token = 'T1==cGFydG5lcl9pZD00NzcyMTQ4MSZzaWc9YmY1YmFhODIxZDVjZGIxMTI1NTkxMDMxOTA5NDFmMmQyNzVkZWY2MzpzZXNzaW9uX2lkPTFfTVg0ME56Y3lNVFE0TVg1LU1UWTROalUzTWpVeE5ETXpOMzVMTUVWeVl6aEhNbnBMYldncmFtSkpiUzlUVm1kRVpFNS1VSDUtJmNyZWF0ZV90aW1lPTE2ODY1NzYzODMmbm9uY2U9MC42MDAzOTU4OTA0NTM5ODM0JnJvbGU9cHVibGlzaGVyJmV4cGlyZV90aW1lPTE2ODY1OTc5ODImaW5pdGlhbF9sYXlvdXRfY2xhc3NfbGlzdD0=';
 
   const toggleVideo = () => {
     publisher.current.toggleVideo();
