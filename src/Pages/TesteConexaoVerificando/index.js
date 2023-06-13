@@ -4,7 +4,12 @@ import { useNavigate } from "react-router-dom";
 
 import load from "../../Assets/load.svg";
 
-import * as S from './styles';
+import Footer from "../../Components/Footer";
+import Content from "../../Components/Content";
+import HomeComponent from "../../Components/Home";
+
+import * as S from '../../Components/styles/styles';
+import * as SS from './styles';
 
 export default function TesteConexaoVerificando() {
   const navigate = useNavigate();
@@ -15,15 +20,28 @@ export default function TesteConexaoVerificando() {
   })
 
   return (
-    <S.Content>
-      <S.Location>
-        <img src={load} alt="Load" />
-      </S.Location>
-      <S.Title>Estamos testando a sua conexão a internet.</S.Title>
+    <HomeComponent>
+      {/* central content */}
+      <Content>
+          <S.Row>
+            <SS.Location>
+              <img src={load} alt="Load" />
+            </SS.Location>
+          </S.Row>
 
-      <S.ButtonGroup>
-        <S.Button onClick={() => navigate(`/agendamento/testeconexaook`)}>Continuar</S.Button>
-      </S.ButtonGroup>
-    </S.Content>
+          <S.Row>
+            <S.Title>Estamos testando a sua conexão a internet.</S.Title>
+          </S.Row>
+      </Content>
+
+      {/* footer content */}
+      <Footer>
+        <S.Row>
+          <S.Column>
+            <S.ButtonPrimary fullwidth="true"  onClick={() => navigate("/chamada-de-video/testeconexaook")}>Continuar</S.ButtonPrimary>
+          </S.Column>
+        </S.Row>
+      </Footer>
+    </HomeComponent>
   )
 }

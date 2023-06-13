@@ -43,7 +43,7 @@ export default function AnexoDocumentoFrente() {
       <Footer>
         <S.Row>
           <S.Column>
-            <S.ButtonPrimary fullwidth={true} onClick={() => navigate("/agendamento/documento-verso")}>Continuar</S.ButtonPrimary>
+            <S.ButtonPrimary fullwidth="true"  onClick={() => navigate("/agendamento/documento-verso")}>Continuar</S.ButtonPrimary>
           </S.Column>
         </S.Row>
       </Footer>

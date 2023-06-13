@@ -42,7 +42,7 @@ export default function DocumentosRecebidos() {
       <Footer>
         <S.Row>
           <S.Column>
-            <S.ButtonPrimary fullwidth={true} onClick={() => navigate("/agendamento/confirmacao-agendamento")}>OK</S.ButtonPrimary>
+            <S.ButtonPrimary fullwidth="true"  onClick={() => navigate("/agendamento/confirmacao-agendamento")}>OK</S.ButtonPrimary>
           </S.Column>
         </S.Row>
       </Footer>

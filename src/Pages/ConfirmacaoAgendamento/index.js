@@ -105,7 +105,7 @@ export default function ConfirmacaoAgendamento() {
       <Footer>
         <S.Row>
           <S.Column>
-            <S.ButtonPrimary fullwidth={true} onClick={() => navigate("/")}>OK</S.ButtonPrimary>
+            <S.ButtonPrimary fullwidth="true"  onClick={() => navigate("/")}>OK</S.ButtonPrimary>
           </S.Column>
         </S.Row>
       </Footer>

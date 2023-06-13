@@ -47,7 +47,7 @@ export default function PreencherDados() {
       <Footer>
         <S.Row>
           <S.Column>
-            <S.ButtonPrimary fullwidth={true} onClick={() => navigate("/agendamento/data-calendario")}>Continuar</S.ButtonPrimary>
+            <S.ButtonPrimary fullwidth="true"  onClick={() => navigate("/agendamento/data-calendario")}>Continuar</S.ButtonPrimary>
           </S.Column>
         </S.Row>
       </Footer>

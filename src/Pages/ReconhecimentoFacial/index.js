@@ -1,6 +1,6 @@
 import React, { useEffect,  } from "react"
 import { useNavigateContext } from "../../Context/NavigateContext"
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation  } from "react-router-dom";
 
 import face from "../../Assets/face.svg";
 
@@ -13,7 +13,16 @@ import * as SS from './styles';
 
 export default function ReconhecimentoFacial() {
   const navigate = useNavigate();
+  const location = useLocation();
   const { setHeaderBack } = useNavigateContext();
+
+  const handleNavigate = () => {
+    if (location.pathname === '/chamada-de-video/reconhecimento-facial') {
+      navigate("/chamada-de-video/testeconexao")
+    } else {
+      navigate("/agendamento/recomendacao-anexo")
+    }
+  }
 
   useEffect(() => {
     setHeaderBack(true)
@@ -46,7 +55,7 @@ export default function ReconhecimentoFacial() {
       <Footer>
         <S.Row>
           <S.Column>
-            <S.ButtonPrimary fullwidth={true} onClick={() => navigate("/agendamento/recomendacao-anexo")}>Enviar</S.ButtonPrimary>
+            <S.ButtonPrimary fullwidth="true"  onClick={handleNavigate}>Enviar</S.ButtonPrimary>
           </S.Column>
         </S.Row>
       </Footer>

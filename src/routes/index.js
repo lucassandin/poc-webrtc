@@ -53,6 +53,7 @@ const RoutesComponent = () => {
             <Route path="/agendamento/permissao" element={<Permissao />} />
             <Route path="/agendamento/recomendacao-facial" element={<RecomendacaoFacial />} />
             <Route path="/agendamento/reconhecimento-facial" element={<ReconhecimentoFacial />} />
+            
             <Route path="/agendamento/recomendacao-anexo" element={<RecomendacaoAnexo />} />
             <Route path="/agendamento/documento-frente" element={<AnexoDocumentoFrente />} />
             <Route path="/agendamento/documento-verso" element={<AnexoDocumentoVerso />} />
@@ -60,11 +61,11 @@ const RoutesComponent = () => {
             <Route path="/agendamento/documentos-recebidos" element={<DocumentosRecebidos />} />
             <Route path="/agendamento/confirmacao-agendamento" element={<ConfirmacaoAgendamento />} />
 
-
-            <Route path="/agendamento/orientacoes" element={<Orientacoes />} />
-            <Route path="/agendamento/testeconexao" element={<TesteConexao />} />
-            <Route path="/agendamento/testeconexaoverificando" element={<TesteConexaoVerificando />} />
-            <Route path="/agendamento/testeconexaook" element={<TesteConexaoOk />} />
+            <Route path="/chamada-de-video/orientacoes" element={<Orientacoes />} />
+            <Route path="/chamada-de-video/reconhecimento-facial" element={<ReconhecimentoFacial />} />
+            <Route path="/chamada-de-video/testeconexao" element={<TesteConexao />} />
+            <Route path="/chamada-de-video/testeconexaoverificando" element={<TesteConexaoVerificando />} />
+            <Route path="/chamada-de-video/testeconexaook" element={<TesteConexaoOk />} />
 
 
             {/* // fluxo de agendamento END */}

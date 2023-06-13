@@ -9,7 +9,13 @@ import '@vonage/screen-share/screen-share.js';
 import video from "../../Assets/video.png";
 import microfone from "../../Assets/microfone.png";
 import encerrar from "../../Assets/encerrar-chamada.png";
-import * as S from "./styles";
+
+import Footer from "../../Components/Footer";
+import Content from "../../Components/Content";
+import HomeComponent from "../../Components/Home";
+
+import * as S from '../../Components/styles/styles';
+import * as SS from "./styles";
 import './style.css';
 
 export default function ChamadaDeVideo() {
@@ -53,41 +59,35 @@ export default function ChamadaDeVideo() {
   });
 
   return (
-    <S.Content>
-      <S.VideoGroup>
-        <S.VideoContent>
-          <video-publisher 
-            // width="300px" 
-            // height="240px" 
-            ref={publisher}
-          >
-          </video-publisher>
+  //     {/* <screen-share start-text="start" stop-text="stop" width="300px" height="240px" ref={screenshare}></screen-share> */}
+  <HomeComponent>
+    {/* central content */}
+    <Content>
+      <S.Row>
+        <video-publisher 
+          ref={publisher}
+        >
+        </video-publisher>
+      </S.Row>
+        <video-subscribers 
+          ref={subscribers}
+        ></video-subscribers>
+      <S.Row>
+      </S.Row>
+    </Content>
 
-          {/* <S.Tipo>
-            <div>Você</div>
-          </S.Tipo> */}
-        </S.VideoContent>
-
-        <S.VideoContent>
-          <video-subscribers 
-            // width="300px" 
-            // height="240px" 
-            ref={subscribers}
-          ></video-subscribers>
-
-          {/* <S.Tipo>
-            <div>Operador</div>
-          </S.Tipo> */}
-        </S.VideoContent>
-      </S.VideoGroup>
-
-      {/* <screen-share start-text="start" stop-text="stop" width="300px" height="240px" ref={screenshare}></screen-share> */}
-
-      <S.ButtonGroup>
-        <S.ButtonMedia onClick={toggleAudio}><img src={microfone} alt="Microfone" /></S.ButtonMedia>
-        <S.ButtonMedia onClick={() => navigate("/")}><img src={encerrar} alt="Encerrar" /></S.ButtonMedia>
-        <S.ButtonMedia onClick={toggleVideo}><img src={video} alt="Vídeo" /></S.ButtonMedia>
-      </S.ButtonGroup>
-  </S.Content>
+    {/* footer content */}
+    <Footer>
+      <S.Row>
+        <S.Column>
+          <SS.ButtonGroup>
+            <SS.ButtonMedia onClick={toggleAudio}><img src={microfone} alt="Microfone" /></SS.ButtonMedia>
+            <SS.ButtonMedia onClick={() => navigate("/")}><img src={encerrar} alt="Encerrar" /></SS.ButtonMedia>
+            <SS.ButtonMedia onClick={toggleVideo}><img src={video} alt="Vídeo" /></SS.ButtonMedia>
+          </SS.ButtonGroup>
+        </S.Column>
+      </S.Row>
+    </Footer>
+  </HomeComponent>
   );
 }

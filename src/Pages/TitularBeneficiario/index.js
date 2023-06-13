@@ -30,7 +30,7 @@ export default function TitularBeneficiario() {
             <S.ButtonSecondary>Não</S.ButtonSecondary>
           </S.Column>
           <S.Column>
-            <S.ButtonPrimary fullwidth={true} onClick={() => navigate("/agendamento/preencher-dados")}>Sim</S.ButtonPrimary>
+            <S.ButtonPrimary fullwidth="true"  onClick={() => navigate("/agendamento/preencher-dados")}>Sim</S.ButtonPrimary>
           </S.Column>
         </S.Row>
       </Footer>

@@ -62,7 +62,7 @@ export const Casal = styled.img`
 export const ButtonPrimary = styled.button`
   border: solid 1px blue;
   /* width: 195px; */
-  width: ${props => props.fullwidth ? "100%" : "195px"};
+  width: ${props => props.fullwidth === "true" ? "100%" : "195px"};
 
   height: 60px;
 

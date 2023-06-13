@@ -50,7 +50,7 @@ export default function RecomendacaoFacial() {
       <Footer>
         <S.Row>
           <S.Column>
-            <S.ButtonPrimary fullwidth={true} onClick={() => navigate("/agendamento/reconhecimento-facial")}>Estou pronto(a)</S.ButtonPrimary>
+            <S.ButtonPrimary fullwidth="true"  onClick={() => navigate("/agendamento/reconhecimento-facial")}>Estou pronto(a)</S.ButtonPrimary>
           </S.Column>
         </S.Row>
       </Footer>

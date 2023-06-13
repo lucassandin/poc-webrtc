@@ -37,7 +37,7 @@ export default function Permissao() {
       <Footer>
         <S.Row>
           <S.Column>
-            <S.ButtonPrimary fullwidth={true} onClick={() => navigate("/agendamento/recomendacao-facial")}>Dar permissão</S.ButtonPrimary>
+            <S.ButtonPrimary fullwidth="true"  onClick={() => navigate("/agendamento/recomendacao-facial")}>Dar permissão</S.ButtonPrimary>
           </S.Column>
         </S.Row>
       </Footer>
