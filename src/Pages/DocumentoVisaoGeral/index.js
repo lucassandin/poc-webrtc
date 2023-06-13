@@ -7,7 +7,7 @@ import backDocument from "../../Assets/back-document-no-border.png";
 
 import Footer from "../../Components/Footer";
 import Content from "../../Components/Content";
-import HomeComponent from "../../Components/Home";
+
 
 import * as S from '../../Components/styles/styles';
 import * as SS from './styles';
@@ -21,7 +21,7 @@ export default function DocumentoVisaoGeral() {
   })
 
   return (
-    <HomeComponent>
+    <>
       {/* central content */}
       <Content>
         <S.Row>
@@ -58,6 +58,6 @@ export default function DocumentoVisaoGeral() {
           </S.Column>
         </S.Row>
       </Footer>
-    </HomeComponent>
+    </>
   )
 }

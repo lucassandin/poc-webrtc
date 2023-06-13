@@ -6,7 +6,7 @@ import location from "../../Assets/location.svg";
 
 import Footer from "../../Components/Footer";
 import Content from "../../Components/Content";
-import HomeComponent from "../../Components/Home";
+
 
 import * as S from '../../Components/styles/styles';
 import * as SS from './styles';
@@ -20,7 +20,7 @@ export default function Permissao() {
   })
 
   return (
-    <HomeComponent>
+    <>
       {/* central content */}
       <Content>
         <S.Row>
@@ -41,6 +41,6 @@ export default function Permissao() {
           </S.Column>
         </S.Row>
       </Footer>
-    </HomeComponent>
+    </>
   )
 }

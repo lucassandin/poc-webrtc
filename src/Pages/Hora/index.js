@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 import Footer from "../../Components/Footer";
 import Content from "../../Components/Content";
-import HomeComponent from "../../Components/Home";
+
 
 import * as S from '../../Components/styles/styles';
 
@@ -17,7 +17,7 @@ export default function Hora() {
   })
 
   return (
-    <HomeComponent>
+    <>
       {/* central content */}
       <Content>
         <S.Row>
@@ -60,6 +60,6 @@ export default function Hora() {
           </S.Column>
         </S.Row>
       </Footer>
-    </HomeComponent>
+    </>
   )
 }

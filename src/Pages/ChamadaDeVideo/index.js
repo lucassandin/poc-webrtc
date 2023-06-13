@@ -12,7 +12,7 @@ import encerrar from "../../Assets/encerrar-chamada.png";
 
 import Footer from "../../Components/Footer";
 import Content from "../../Components/Content";
-import HomeComponent from "../../Components/Home";
+
 
 import * as S from '../../Components/styles/styles';
 import * as SS from "./styles";
@@ -61,7 +61,7 @@ export default function ChamadaDeVideo() {
 
   return (
   //     {/* <screen-share start-text="start" stop-text="stop" width="300px" height="240px" ref={screenshare}></screen-share> */}
-  <HomeComponent>
+  <>
     {/* central content */}
     <Content>
       <S.Row>
@@ -89,6 +89,6 @@ export default function ChamadaDeVideo() {
         </S.Column>
       </S.Row>
     </Footer>
-  </HomeComponent>
+  </>
   );
 }
