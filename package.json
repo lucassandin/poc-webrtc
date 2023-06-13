@@ -25,7 +25,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "homolog": "env-cmd -f .env.staging react-scripts start"
+    "homolog": "env-cmd -f .env.staging react-scripts start",
+    "start-sw": "http-server ./build"
   },
   "eslintConfig": {
     "extends": [
@@ -46,6 +47,7 @@
     ]
   },
   "devDependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "http-server": "^14.1.1"
   }
 }
