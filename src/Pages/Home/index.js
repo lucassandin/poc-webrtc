@@ -4,7 +4,7 @@ import { useNavigateContext } from "../../Context/NavigateContext"
 
 import Footer from "../../Components/Footer";
 import Content from "../../Components/Content";
-import HomeComponent from "../../Components/Home";
+
 
 import casal from "../../Assets/casal-tela-inicial.png";
 import * as S from '../../Components/styles/styles';
@@ -18,8 +18,7 @@ export default function Home() {
   })
 
   return (
-    // geral content
-    <HomeComponent>
+    <>
       {/* central content */}
       <Content>
         <S.Row>
@@ -44,6 +43,6 @@ export default function Home() {
           </S.Column>
         </S.Row>
       </Footer>
-    </HomeComponent>
+    </>
   )
 }
