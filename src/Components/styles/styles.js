@@ -50,6 +50,7 @@ export const Column = styled.div`
 export const Logo = styled.img`
   /* margin: 0 auto; */
   width: ${props => props.fullwidth === "true" ? "139px" : "234px"};
+  margin: ${props => props.fullwidth === "true" ? "0" : "3vh 0px"}; ;
   height: 34px;
   padding: 0 5rem;
 `;
