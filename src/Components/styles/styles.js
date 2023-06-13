@@ -57,6 +57,11 @@ export const Logo = styled.img`
 export const Casal = styled.img`
   width: calc(100vw - 30vw);
   height: 50vh;
+
+  @media (min-width: 1366px) {
+    width: 267px;
+    height: 376px;
+  }
 `;
 
 export const ButtonPrimary = styled.button`
