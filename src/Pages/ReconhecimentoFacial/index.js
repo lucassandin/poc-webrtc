@@ -46,7 +46,7 @@ export default function ReconhecimentoFacial() {
       <Footer>
         <S.Row>
           <S.Column>
-            <S.ButtonPrimary onClick={() => navigate("/agendamento/recomendacao-anexo")}>Enviar</S.ButtonPrimary>
+            <S.ButtonPrimary fullwidth={true} onClick={() => navigate("/agendamento/recomendacao-anexo")}>Enviar</S.ButtonPrimary>
           </S.Column>
         </S.Row>
       </Footer>

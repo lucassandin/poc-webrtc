@@ -56,7 +56,7 @@ export default function DataCalendario() {
       <Footer>
         <S.Row>
           <S.Column>
-            <S.ButtonPrimary onClick={() => navigate("/agendamento/hora")}>Continuar</S.ButtonPrimary>
+            <S.ButtonPrimary fullwidth={true} onClick={() => navigate("/agendamento/hora")}>Continuar</S.ButtonPrimary>
           </S.Column>
         </S.Row>
       </Footer>

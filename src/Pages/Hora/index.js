@@ -56,7 +56,7 @@ export default function Hora() {
       <Footer>
         <S.Row>
           <S.Column>
-            <S.ButtonPrimary onClick={() => navigate("/agendamento/permissao")}>Continuar</S.ButtonPrimary>
+            <S.ButtonPrimary fullwidth={true} onClick={() => navigate("/agendamento/permissao")}>Continuar</S.ButtonPrimary>
           </S.Column>
         </S.Row>
       </Footer>

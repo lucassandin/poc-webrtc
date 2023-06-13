@@ -49,7 +49,7 @@ export default function RecomendacaoAnexo() {
       <Footer>
         <S.Row>
           <S.Column>
-            <S.ButtonPrimary onClick={() => navigate("/agendamento/documento-frente")}>Estou pronto(a)</S.ButtonPrimary>
+            <S.ButtonPrimary fullwidth={true} onClick={() => navigate("/agendamento/documento-frente")}>Estou pronto(a)</S.ButtonPrimary>
           </S.Column>
         </S.Row>
       </Footer>
