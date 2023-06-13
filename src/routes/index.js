@@ -3,36 +3,31 @@ import {
   Routes,
   Route,
 } from 'react-router-dom'
-import { Suspense } from 'react'
-import NotFound from "../Components/NotFound"; 
-import Header from "../Components/Header"
-import Home from "../Pages/Home";
-import VideoChamada from "../Pages/VideoChamada";
-import ChamadaDeVideo from '../Pages/ChamadaDeVideo';
-import SejaBemVindo from "../Pages/SejaBemVindo";
-// fluxo de agendamento INIT
-import TitularBeneficiario from "../Pages/TitularBeneficiario"; // 1 ok
-import PreencherDados from "../Pages/PreencherDados"; // 2 ok
-import DataCalendario from "../Pages/DataCalendario"; // 3 ok
-import Hora from "../Pages/Hora"; // 4 ok
-import Permissao from "../Pages/Permissao"; // 5 ok
-import RecomendacaoFacial from "../Pages/RecomendacaoFacial"; // 6 ok
-import ReconhecimentoFacial from "../Pages/ReconhecimentoFacial"; // 7 ok
-import RecomendacaoAnexo from "../Pages/RecomendacaoAnexo"; // 8 ok
-import AnexoDocumentoFrente from "../Pages/AnexoDocumentoFrente"; // 9 ok
-import AnexoDocumentoVerso from "../Pages/AnexoDocumentoVerso"; // 10 ok
-import DocumentoVisaoGeral from "../Pages/DocumentoVisaoGeral"; // 11 ok
-import DocumentosRecebidos from "../Pages/DocumentosRecebidos"; // 12 ok
-import ConfirmacaoAgendamento from "../Pages/ConfirmacaoAgendamento"; // 13 ok
+import { Suspense, lazy } from 'react'
 
-import Orientacoes from "../Pages/Orientacoes"; // 14 ok
-import TesteConexao from "../Pages/TesteConexao"; // 15 
-import TesteConexaoVerificando from "../Pages/TesteConexaoVerificando"; // 16 
-import TesteConexaoOk from "../Pages/TesteConexaoOk"; // 17
-// fluxo de agendamento END
-
-// operador create session
-import Sessoes from "../Pages/Sessoes";
+const NotFound = lazy(() => import("../Components/NotFound"));
+const Header = lazy(() => import("../Components/Header"));
+const Home = lazy(() => import("../Pages/Home"));
+const VideoChamada = lazy(() => import("../Pages/VideoChamada"));
+const ChamadaDeVideo = lazy(() => import('../Pages/ChamadaDeVideo'));
+const SejaBemVindo = lazy(() => import("../Pages/SejaBemVindo"));
+const TitularBeneficiario = lazy(() => import("../Pages/TitularBeneficiario"));
+const PreencherDados = lazy(() => import("../Pages/PreencherDados"));
+const DataCalendario = lazy(() => import("../Pages/DataCalendario"));
+const Hora = lazy(() => import("../Pages/Hora"));
+const Permissao = lazy(() => import("../Pages/Permissao"));
+const RecomendacaoFacial = lazy(() => import("../Pages/RecomendacaoFacial"));
+const ReconhecimentoFacial = lazy(() => import("../Pages/ReconhecimentoFacial"));
+const RecomendacaoAnexo = lazy(() => import("../Pages/RecomendacaoAnexo"));
+const AnexoDocumentoFrente = lazy(() => import("../Pages/AnexoDocumentoFrente"));
+const AnexoDocumentoVerso = lazy(() => import("../Pages/AnexoDocumentoVerso"));
+const DocumentoVisaoGeral = lazy(() => import("../Pages/DocumentoVisaoGeral"));
+const DocumentosRecebidos = lazy(() => import("../Pages/DocumentosRecebidos"));
+const ConfirmacaoAgendamento = lazy(() => import("../Pages/ConfirmacaoAgendamento"));
+const Orientacoes = lazy(() => import("../Pages/Orientacoes"));
+const TesteConexao = lazy(() => import("../Pages/TesteConexao"));
+const TesteConexaoVerificando = lazy(() => import("../Pages/TesteConexaoVerificando"));
+const TesteConexaoOk = lazy(() => import("../Pages/TesteConexaoOk"));
 
 const RoutesComponent = () => {
   return (
@@ -45,7 +40,6 @@ const RoutesComponent = () => {
             <Route path="/chamada-de-video" element={<ChamadaDeVideo />} />
             <Route path="/seja-bem-vindo" element={<SejaBemVindo />} />
 
-            {/* // fluxo de agendamento INIT */}
             <Route path="/agendamento/titular-beneficiario" element={<TitularBeneficiario />} />
             <Route path="/agendamento/preencher-dados" element={<PreencherDados />} />
             <Route path="/agendamento/data-calendario" element={<DataCalendario />} />
@@ -66,12 +60,6 @@ const RoutesComponent = () => {
             <Route path="/chamada-de-video/testeconexao" element={<TesteConexao />} />
             <Route path="/chamada-de-video/testeconexaoverificando" element={<TesteConexaoVerificando />} />
             <Route path="/chamada-de-video/testeconexaook" element={<TesteConexaoOk />} />
-
-
-            {/* // fluxo de agendamento END */}
-
-            {/* create session operador */}
-            <Route path="/operador/sessions" element={<Sessoes />} />
 
             <Route path="*" element={<NotFound />} />
           </Routes>

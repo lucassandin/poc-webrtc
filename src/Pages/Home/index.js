@@ -23,7 +23,7 @@ export default function Home() {
       {/* central content */}
       <Content>
         <S.Row>
-          <S.Casal src={casal} alt="Casal" />
+          <S.Casal src={casal} alt="Casal" loading="lazy"/>
         </S.Row>
         <S.Row>
           <h1>Vídeo Chamada</h1>
