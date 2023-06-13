@@ -4,7 +4,7 @@ import { useNavigateContext } from "../../Context/NavigateContext";
 
 import setaVoltar from "../../Assets/seta-back.svg";
 import logo from "../../Assets/logo-mercantil-oficial.svg";
-import * as S from './styles';
+import * as S from '../../Components/styles/styles';
 
 export default function Header() {
   const navigate = useNavigate()

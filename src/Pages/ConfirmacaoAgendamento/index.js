@@ -2,7 +2,12 @@ import React, { useEffect,  } from "react"
 import { useNavigateContext } from "../../Context/NavigateContext"
 import { useNavigate } from "react-router-dom";
 
-import * as S from './styles';
+import Footer from "../../Components/Footer";
+import Content from "../../Components/Content";
+import HomeComponent from "../../Components/Home";
+
+import * as S from '../../Components/styles/styles';
+import * as SS from './styles';
 
 export default function ConfirmacaoAgendamento() {
   const navigate = useNavigate();
@@ -13,52 +18,97 @@ export default function ConfirmacaoAgendamento() {
   })
 
   return (
-    <S.Content>
-      <S.Title>Confirmação de agendamento</S.Title>
-
-
-      <S.Contorno>
+    <HomeComponent>
+      {/* central content */}
+      <Content>
         <S.Row>
-          <S.Label>CPF</S.Label>
-          <S.Text>235*******893</S.Text>
+          <S.Title>Confirmação de agendamento</S.Title>
         </S.Row>
 
-        <S.Row>
-          <S.Label>CELULAR</S.Label>
-          <S.Text>(31) 98526-4057</S.Text>
-        </S.Row>
+        <div style={{ marginTop: "1rem"}}></div>
 
-        
-        <div style={{
-          borderTop: "1px solid #dedede",
-          padding: "1rem 0 1rem 1rem",
-          display: "inherit",
-          gap: "4rem"
-        }}>
-          <S.Column>
-            <S.Label>Data</S.Label>
-            <S.Text>26/02/2023</S.Text>
-          </S.Column>
-          <S.Column>
-            <S.Label>Hora</S.Label>
-            <S.Text>13:30</S.Text>
-          </S.Column>
-        </div>
+        <SS.Contorno>
+            <S.Row>
+              <S.Column style={{ margin: "1rem"}}>
+                <SS.Div>
+                  <S.Label>CPF</S.Label>
+                </SS.Div>
+                <SS.Div>
+                  <S.Text>235*******893</S.Text>
+                </SS.Div>
+              </S.Column>
+            </S.Row>
+          </SS.Contorno>
           
-        <S.Row>
-          <S.Label>Reconhecimento facial</S.Label>
-          <S.Text>Ok</S.Text>
-        </S.Row>
+          <SS.Contorno>
+            <S.Row>
+              <S.Column style={{ margin: "1rem"}}>
+                <SS.Div>
+                  <S.Label>CELULAR</S.Label>
+                </SS.Div>
+                <SS.Div>
+                  <S.Text>(31) 98526-4057</S.Text>
+                </SS.Div>
+              </S.Column>
+            </S.Row>
+          </SS.Contorno>
 
-        <S.Row>
-          <S.Label>Documentos</S.Label>
-          <S.Text>Ok</S.Text>
-        </S.Row>
-      </S.Contorno>
+          <SS.Contorno>
+            <S.Row>
+              <S.Column style={{ margin: "1rem"}}>
+                <SS.Div>
+                  <S.Label>Data</S.Label>
+                </SS.Div>
+                <SS.Div>
+                  <S.Text>26/02/2023</S.Text>
+                </SS.Div>
+              </S.Column>
+              <S.Column style={{ margin: "1rem"}}>
+                <SS.Div>
+                  <S.Label>Hora</S.Label>
+                </SS.Div>
+                <SS.Div>
+                  <S.Text>13:30</S.Text>
+                </SS.Div>
+              </S.Column>
+            </S.Row>
+          </SS.Contorno>
 
-      <S.ButtonGroup>
-        <S.Button onClick={() => navigate(`/seja-bem-vindo`)}>OK</S.Button>
-      </S.ButtonGroup>
-    </S.Content>
+          <SS.Contorno>
+            <S.Row>
+              <S.Column style={{ margin: "1rem"}}>
+                <SS.Div>
+                  <S.Label>Reconhecimento facial</S.Label>
+                </SS.Div>
+                <SS.Div>
+                  <S.Text>Ok</S.Text>
+                </SS.Div>
+              </S.Column>
+            </S.Row>
+          </SS.Contorno>
+
+          <SS.Contorno>
+            <S.Row>
+              <S.Column style={{ margin: "1rem"}}>
+                <SS.Div>
+                  <S.Label>Documentos</S.Label>
+                </SS.Div>
+                <SS.Div>
+                  <S.Text>Ok</S.Text>
+                </SS.Div>
+              </S.Column>
+            </S.Row>
+          </SS.Contorno>
+      </Content>
+
+      {/* footer content */}
+      <Footer>
+        <S.Row>
+          <S.Column>
+            <S.ButtonPrimary onClick={() => navigate("/")}>OK</S.ButtonPrimary>
+          </S.Column>
+        </S.Row>
+      </Footer>
+    </HomeComponent>
   )
 }

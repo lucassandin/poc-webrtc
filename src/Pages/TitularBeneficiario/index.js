@@ -1,26 +1,39 @@
-import React, { useEffect,  } from "react"
-import { useNavigateContext } from "../../Context/NavigateContext"
+import React from "react"
 import { useNavigate } from "react-router-dom";
 
-import * as S from './styles';
+import Footer from "../../Components/Footer";
+import Content from "../../Components/Content";
+import HomeComponent from "../../Components/Home";
+
+import * as S from '../../Components/styles/styles';
 
 export default function TitularBeneficiario() {
   const navigate = useNavigate();
-  const { setHeaderBack } = useNavigateContext();
-
-  useEffect(() => {
-    setHeaderBack(false)
-  })
+ 
 
   return (
-    <S.Content>
-      <S.Title>Antes de iniciamos, gostaríamos de te conhecer. :)</S.Title>
+    <HomeComponent>
+      {/* central content */}
+      <Content>
+        <S.Row>
+          <h1>Antes de iniciamos, gostaríamos de te conhecer. :)</h1>
+        </S.Row>
+        <S.Row>
+          <p>Você é o titular do benefício?</p>
+        </S.Row>
+      </Content>
 
-      <S.Span>Você é o titular do benefício?</S.Span>
-      <S.ButtonGroup>
-        <S.Button onClick={() => navigate(`/agendamento/preencher-dados`)}>Sim</S.Button>
-        <S.Button onClick={() => navigate(`/seja-bem-vindo`)}>Não</S.Button>
-      </S.ButtonGroup>
-    </S.Content>
+      {/* footer content */}
+      <Footer>
+        <S.Row>
+          <S.Column>
+            <S.ButtonSecondary>Não</S.ButtonSecondary>
+          </S.Column>
+          <S.Column>
+            <S.ButtonPrimary onClick={() => navigate("/agendamento/preencher-dados")}>Sim</S.ButtonPrimary>
+          </S.Column>
+        </S.Row>
+      </Footer>
+    </HomeComponent>
   )
 }

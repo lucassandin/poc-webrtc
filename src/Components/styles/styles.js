@@ -61,7 +61,9 @@ export const Casal = styled.img`
 
 export const ButtonPrimary = styled.button`
   border: solid 1px blue;
-  width: 195px;
+  /* width: 195px; */
+  width: ${props => props.fullwidth ? "100%" : "195px"};
+
   height: 60px;
 
   background: #1526FF;
@@ -91,4 +93,85 @@ export const ButtonSecondary = styled.button`
 
   text-align: center;
   color: #1526FF;
+`;
+
+export const Title = styled.span`
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 37px;
+  color: #000000;
+  margin-top: 1rem;
+`;
+
+export const InputContent = styled.div`
+  display: inherit;
+  flex-direction: column;
+  gap: 3vh;
+  margin-top: 30px;
+  width: 100%;
+
+  overflow: scroll;
+  height: 50vh;
+`;
+
+export const InputGroup = styled.div`
+  display: inherit;
+  flex-direction: column;
+  position: relative;
+`;
+
+export const Label = styled.label`
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000;
+`;
+export const Input = styled.input`
+  border: 2px solid #000000;
+  border-radius: 4px;
+  height: 70px;
+  padding-left: 1rem;
+
+  &::-webkit-input-placeholder { /* Edge */
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    color: #000000;
+  }
+
+  &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    color: #000000;
+  }
+
+  &::placeholder {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    color: #000000;
+  }
+`;
+
+export const Span = styled.span`
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000;
+  margin-top: 3rem;
+`;
+
+export const Text = styled.span`
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  color: #000000;
 `;

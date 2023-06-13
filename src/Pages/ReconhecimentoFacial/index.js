@@ -4,7 +4,12 @@ import { useNavigate } from "react-router-dom";
 
 import face from "../../Assets/face.svg";
 
-import * as S from './styles';
+import Footer from "../../Components/Footer";
+import Content from "../../Components/Content";
+import HomeComponent from "../../Components/Home";
+
+import * as S from '../../Components/styles/styles';
+import * as SS from './styles';
 
 export default function ReconhecimentoFacial() {
   const navigate = useNavigate();
@@ -15,29 +20,36 @@ export default function ReconhecimentoFacial() {
   })
 
   return (
-    <S.Content>
-      <S.ImagemContent>
-        <S.Img src={face} alt="Face" />
-      </S.ImagemContent>
+    <HomeComponent>
+      {/* central content */}
+      <Content>
+        <S.Row>
+          <SS.ImagemContent>
+            <SS.Img src={face} alt="Face" />
+          </SS.ImagemContent>
+        </S.Row>
+        <S.Row>
+          <S.Span>
+            <div>
+            Importante:
+            </div>
+            <ol>
+              <li>Posicione seu rosto dentro da marcação.</li>
+              <li>Esteja em um lugar com boa iluminação.</li>
+              <li>Caso use óculos, retire por favor!</li>
+            </ol>
+          </S.Span>
+        </S.Row>
+      </Content>
 
-      <S.Span>
-        <div>
-        Importante:
-        </div>
-        <ol>
-          <li>Posicione seu rosto dentro da marcação.</li>
-          <li>Esteja em um lugar com boa iluminação.</li>
-          <li>Caso use óculos, retire por favor!</li>
-        </ol>
-      </S.Span>
-
-      <S.ButtonGroup>
-        {/* <S.Button onClick={() => navigate(`/agendamento/recomendacao-anexo`)}>Enviar</S.Button> */}
-
-
-
-        <S.Button onClick={() => navigate(`/agendamento/testeconexao`)}>Enviar</S.Button>
-      </S.ButtonGroup>
-    </S.Content>
+      {/* footer content */}
+      <Footer>
+        <S.Row>
+          <S.Column>
+            <S.ButtonPrimary onClick={() => navigate("/agendamento/recomendacao-anexo")}>Enviar</S.ButtonPrimary>
+          </S.Column>
+        </S.Row>
+      </Footer>
+    </HomeComponent>
   )
 }

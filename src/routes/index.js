@@ -25,18 +25,10 @@ import DocumentoVisaoGeral from "../Pages/DocumentoVisaoGeral"; // 11 ok
 import DocumentosRecebidos from "../Pages/DocumentosRecebidos"; // 12 ok
 import ConfirmacaoAgendamento from "../Pages/ConfirmacaoAgendamento"; // 13 ok
 
-
-
-
 import Orientacoes from "../Pages/Orientacoes"; // 14 ok
 import TesteConexao from "../Pages/TesteConexao"; // 15 
 import TesteConexaoVerificando from "../Pages/TesteConexaoVerificando"; // 16 
 import TesteConexaoOk from "../Pages/TesteConexaoOk"; // 17
-
-
-
-
-
 // fluxo de agendamento END
 
 // operador create session
@@ -62,8 +54,8 @@ const RoutesComponent = () => {
             <Route path="/agendamento/recomendacao-facial" element={<RecomendacaoFacial />} />
             <Route path="/agendamento/reconhecimento-facial" element={<ReconhecimentoFacial />} />
             <Route path="/agendamento/recomendacao-anexo" element={<RecomendacaoAnexo />} />
-            <Route path="/agendamento/anexoDocumento-frente" element={<AnexoDocumentoFrente />} />
-            <Route path="/agendamento/anexoDocumento-verso" element={<AnexoDocumentoVerso />} />
+            <Route path="/agendamento/documento-frente" element={<AnexoDocumentoFrente />} />
+            <Route path="/agendamento/documento-verso" element={<AnexoDocumentoVerso />} />
             <Route path="/agendamento/documento-visao-geral" element={<DocumentoVisaoGeral />} />
             <Route path="/agendamento/documentos-recebidos" element={<DocumentosRecebidos />} />
             <Route path="/agendamento/confirmacao-agendamento" element={<ConfirmacaoAgendamento />} />

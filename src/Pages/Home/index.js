@@ -1,16 +1,25 @@
-import React from "react"
+import React, { useEffect,  } from "react"
+import { useNavigate } from "react-router-dom";
+import { useNavigateContext } from "../../Context/NavigateContext"
 
 import Footer from "../../Components/Footer";
 import Content from "../../Components/Content";
+import HomeComponent from "../../Components/Home";
 
 import casal from "../../Assets/casal-tela-inicial.png";
-import * as S from './styles';
+import * as S from '../../Components/styles/styles';
 
 export default function Home() {
+  const navigate = useNavigate();
+  const { setHeaderBack } = useNavigateContext();
+
+  useEffect(() => {
+    setHeaderBack(false)
+  })
 
   return (
     // geral content
-    <S.Home>
+    <HomeComponent>
       {/* <S.Header>
         <S.Row>
           <S.Column>
@@ -63,7 +72,7 @@ export default function Home() {
             <S.ButtonSecondary>Já agendei</S.ButtonSecondary>
           </S.Column>
           <S.Column>
-            <S.ButtonPrimary>Primeiro acesso</S.ButtonPrimary>
+            <S.ButtonPrimary onClick={() => navigate("/agendamento/titular-beneficiario")}>Primeiro acesso</S.ButtonPrimary>
           </S.Column>
         </S.Row>
       </Footer>
@@ -77,6 +86,6 @@ export default function Home() {
           </S.Column>
         </S.Row>
       </S.Footer> */}
-    </S.Home>
+    </HomeComponent>
   )
 }

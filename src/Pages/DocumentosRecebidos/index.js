@@ -4,7 +4,12 @@ import { useNavigate } from "react-router-dom";
 
 import documentReceive from "../../Assets/document-receive.svg";
 
-import * as S from './styles';
+import Footer from "../../Components/Footer";
+import Content from "../../Components/Content";
+import HomeComponent from "../../Components/Home";
+
+import * as S from '../../Components/styles/styles';
+import * as SS from './styles';
 
 export default function DocumentosRecebidos() {
   const navigate = useNavigate();
@@ -15,16 +20,32 @@ export default function DocumentosRecebidos() {
   })
 
   return (
-    <S.Content>
-      <S.Location>
-        <img src={documentReceive} alt="Documento recebido" />
-      </S.Location>
-      <S.Title>Documentos recebido!</S.Title>
-      <S.Span>Em até 2 horas iremos dar retorno.</S.Span>
+    <HomeComponent>
+      {/* central content */}
+      <Content>
+        <S.Row>
+          <SS.Location>
+          <img src={documentReceive} alt="Documento recebido" />
+          </SS.Location>
+        </S.Row>
 
-      <S.ButtonGroup>
-        <S.Button onClick={() => navigate(`/agendamento/confirmacao-agendamento`)}>OK</S.Button>
-      </S.ButtonGroup>
-    </S.Content>
+        <S.Row>
+        <S.Title>Documentos recebido!</S.Title>
+        </S.Row>
+
+        <S.Row>
+        <S.Span>Em até 2 horas iremos dar retorno.</S.Span>
+        </S.Row>
+      </Content>
+
+      {/* footer content */}
+      <Footer>
+        <S.Row>
+          <S.Column>
+            <S.ButtonPrimary onClick={() => navigate("/agendamento/confirmacao-agendamento")}>OK</S.ButtonPrimary>
+          </S.Column>
+        </S.Row>
+      </Footer>
+    </HomeComponent>
   )
 }

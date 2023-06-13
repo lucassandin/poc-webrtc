@@ -5,7 +5,12 @@ import { useNavigate } from "react-router-dom";
 import frontDocument from "../../Assets/front-document-no-border.png";
 import backDocument from "../../Assets/back-document-no-border.png";
 
-import * as S from './styles';
+import Footer from "../../Components/Footer";
+import Content from "../../Components/Content";
+import HomeComponent from "../../Components/Home";
+
+import * as S from '../../Components/styles/styles';
+import * as SS from './styles';
 
 export default function DocumentoVisaoGeral() {
   const navigate = useNavigate();
@@ -16,30 +21,43 @@ export default function DocumentoVisaoGeral() {
   })
 
   return (
-    <S.Content>
-      <S.ImagemContent>
-        <S.Contorno>
-          <S.Div>Frente:</S.Div>
-          <S.Img src={frontDocument} alt="Documento frente" />
-        </S.Contorno>
+    <HomeComponent>
+      {/* central content */}
+      <Content>
+        <S.Row>
+          <S.Column>
+              <SS.Div>Frente:</SS.Div>
+              <SS.Img src={frontDocument} alt="Documento frente" />
+          </S.Column>
+        </S.Row>
 
-        <S.Contorno>
-          <S.Div>Verso:</S.Div>
-          <S.Img src={backDocument} alt="Documento verso" />
-        </S.Contorno>
-      </S.ImagemContent>
+        <S.Row>
+          <S.Column>
+              <SS.Div>Verso:</SS.Div>
+              <SS.Img src={backDocument} alt="Documento verso" />
+          </S.Column>
+        </S.Row>
+        <S.Row>
+          <S.Span>
+            <div>
+            Importante:
+            </div>
+            Posicione seu documento dentro da marcação.
+          </S.Span>
+        </S.Row>
+      </Content>
 
-      <S.Span>
-        <div>
-        Importante:
-        </div>
-        Posicione seu documento dentro da marcação.
-      </S.Span>
-
-      <S.ButtonGroup>
-        <S.Button onClick={() => navigate(`/agendamento/documentos-recebidos`)}>Enviar</S.Button>
-        <S.Button onClick={() => navigate(`/agendamento/anexoDocumento-frente`)}>Refazer</S.Button>
-      </S.ButtonGroup>
-    </S.Content>
+      {/* footer content */}
+      <Footer>
+        <S.Row>
+          <S.Column>
+            <S.ButtonSecondary onClick={() => navigate(`/agendamento/documento-frente`)}>Refazer</S.ButtonSecondary>
+          </S.Column>
+          <S.Column>
+            <S.ButtonPrimary onClick={() => navigate(`/agendamento/documentos-recebidos`)}>Enviar</S.ButtonPrimary>
+          </S.Column>
+        </S.Row>
+      </Footer>
+    </HomeComponent>
   )
 }
