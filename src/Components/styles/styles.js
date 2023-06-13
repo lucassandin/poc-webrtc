@@ -25,6 +25,11 @@ export const Footer = styled.div`
   width: calc(100% - 2px);
   bottom: 0;
   padding: 2.5vh 0 10vh;
+
+  @media (min-height: 480px) {
+    padding: 0;
+    margin-bottom: 1rem;
+  }
 `;
 
 export const ButtonBack = styled.button`
@@ -59,6 +64,10 @@ export const Casal = styled.img`
   width: 267px;
   height: 376px;
 
+  @media (max-height: 480px) {
+    width: 20vw;
+    height: 30vh;
+  }
 `;
 
 export const ButtonPrimary = styled.button`
