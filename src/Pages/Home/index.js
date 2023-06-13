@@ -40,7 +40,7 @@ export default function Home() {
             <S.ButtonSecondary onClick={() => navigate("/chamada-de-video/orientacoes")}>Já agendei</S.ButtonSecondary>
           </S.Column>
           <S.Column>
-            <S.ButtonPrimary onClick={() => navigate("/agendamento/titular-beneficiario")}>Primeiro acesso</S.ButtonPrimary>
+            <S.ButtonPrimary fullwidth={"true"} onClick={() => navigate("/agendamento/titular-beneficiario")}>Primeiro acesso</S.ButtonPrimary>
           </S.Column>
         </S.Row>
       </Footer>
