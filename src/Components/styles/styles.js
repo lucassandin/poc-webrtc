@@ -49,7 +49,7 @@ export const Column = styled.div`
 
 export const Logo = styled.img`
   /* margin: 0 auto; */
-  width: 139px;
+  width: ${props => props.fullwidth === "true" ? "139px" : "234px"};
   height: 34px;
   padding: 0 5rem;
 `;

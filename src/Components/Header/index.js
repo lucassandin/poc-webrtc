@@ -24,7 +24,7 @@ export default function Header() {
 
         <S.Column>
           <div>
-            <S.Logo src={logo} alt="Logo" />
+            <S.Logo fullwidth={(headerBack ? "true" : "false")} src={logo} alt="Logo" />
           </div>
         </S.Column>
 
