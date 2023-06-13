@@ -25,6 +25,7 @@ export default function ChamadaDeVideo() {
   useEffect(() => {
     setHeaderBack(true)
   }) 
+  
   // Get references to Web Components
   const publisher = useRef(null);
   const subscribers = useRef(null);
