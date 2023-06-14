@@ -1,47 +1,5 @@
 import { styled } from "styled-components";
 
-export const Content = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-`;
-
-export const ButtonGroup = styled.div`
-  display: inherit;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 3rem;
-  margin-top: 5rem;
-  margin-bottom: 2rem;
-`;
-
-export const Button = styled.button`
-  width: 100%;
-  height: 60px;
-  background: #000000;
-  border-radius: 4px;
-  border: none;
-  color: #fff;
-`;
-
-export const Title = styled.span`
-  font-style: normal;
-  font-weight: 700;
-  font-size: 32px;
-  line-height: 37px;
-  color: #000000;
-  margin-top: 3rem;
-`;
-
-export const Span = styled.span`
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 21px;
-  color: #000000;
-  margin-top: 3rem;
-`;
-
 export const ImagemContent = styled.div`
   display: inherit;
   justify-content: center;
@@ -50,4 +8,25 @@ export const ImagemContent = styled.div`
 
 export const Img = styled.img`
   width: fit-content;
+`;
+
+export const TextOverlay = styled.div`
+  z-index: 9999;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  & span {
+    color: #FFFFFF;
+  }
+`;
+
+export const ValidateFacial = styled.span`
+  position: absolute;
+  margin: auto 0;
+  width: 60vw;
+  height: 45vh;
+  border-radius: 45%;
+  border: 100vw solid #4a4a4a7d;
+  z-index: 999;
 `;

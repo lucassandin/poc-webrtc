@@ -4,11 +4,13 @@ const NavigateContext = createContext(null)
 
 export const NavigateProvider = ({ children }) => {
   const [headerBack, setHeaderBack] = useState(false);
-    return (
-      <NavigateContext.Provider value={{ headerBack, setHeaderBack }}>
-          {children}
-      </NavigateContext.Provider>
-    )
+  const [isOverlay, setIsOverlay] = useState(false);
+
+  return (
+    <NavigateContext.Provider value={{ headerBack, setHeaderBack, isOverlay, setIsOverlay }}>
+        {children}
+    </NavigateContext.Provider>
+  )
 }
 
 export function useNavigateContext() {

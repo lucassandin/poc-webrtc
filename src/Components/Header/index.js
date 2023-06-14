@@ -8,11 +8,11 @@ import * as S from '../../Components/styles/styles';
 
 export default function Header() {
   const navigate = useNavigate()
-  const { headerBack } = useNavigateContext();
+  const { headerBack, isOverlay } = useNavigateContext();
 
   return (
     // header
-    <S.Header>
+    <S.Header isOverlay={isOverlay}>
       <S.Row>
         <S.Column>
           {headerBack ? (

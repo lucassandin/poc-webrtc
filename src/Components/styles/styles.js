@@ -4,14 +4,16 @@ export const Home = styled.div`
   /* border: 1px red solid; */
   height: calc(100vh);
   position: relative;
-  margin: 0 1rem;
+  margin: ${props => props.isOverlay === true ? "0" : "0 1rem" };
 `;
 export const Header = styled.div`
   /* height: calc(10vh); */
   /* border: 1px blue solid; */
-  position: relative;
+  position: ${props => props.isOverlay === true ? "absolute" : "relative" };
   top: 0;
   padding: 2.5vh 0;
+  width: 100%;
+  z-index: 9999;
 `;
 export const Content = styled.div`
   /* border: 1px green solid; */
@@ -34,6 +36,7 @@ export const Footer = styled.div`
   width: calc(100% - 2px);
   bottom: 0;
   padding: 2.5vh 0 10vh;
+  z-index: 9999;
 
   @media (min-height: 480px) {
     padding: 0;

@@ -43,3 +43,7 @@ li {
 
   padding: 1rem 0;
 }
+
+#container-circles { 
+  z-index: 999;
+}
