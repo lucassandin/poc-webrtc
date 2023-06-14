@@ -34,10 +34,10 @@ export const Footer = styled.div`
   padding: 2.5vh 0 10vh;
   z-index: 9999;
 
-  @media (min-height: 480px) {
+  /* @media (min-height: 480px) {
     padding: 0;
     margin-bottom: 1rem;
-  }
+  } */
 `;
 
 export const ButtonBack = styled.button`
