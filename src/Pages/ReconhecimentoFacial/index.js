@@ -45,7 +45,7 @@ export default function ReconhecimentoFacial() {
           <S.ValidateShape src={faceShape} alt="Face shape" />
           <S.Column>
             <Camera
-              onTakePhotoAnimationDone={ (dataUri) => { handleTakePhoto(dataUri); } }
+              onTakePhoto={ (dataUri) => { handleTakePhoto(dataUri); } }
               idealFacingMode={FACING_MODES.USER}
               idealResolution={{width: 640, height: 480}}
               imageType={IMAGE_TYPES.JPG}

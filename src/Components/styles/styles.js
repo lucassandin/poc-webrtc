@@ -24,7 +24,6 @@ export const Header = styled.div`
 export const Content = styled.div`
   /* border: 1px green solid; */
   height: inherit;
-  max-height: 70vh;
 `;
 export const Footer = styled.div`
   /* border: 1px yellow solid; */
