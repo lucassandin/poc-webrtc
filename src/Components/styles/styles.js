@@ -197,3 +197,12 @@ export const Text = styled.span`
   line-height: 23px;
   color: #000000;
 `;
+
+export const ValidateShape = styled.img`
+  position: absolute;
+  top: 0;
+  margin: 0 auto;
+  z-index: 999;
+  height: 100vh;
+  overflow: hidden;
+`;

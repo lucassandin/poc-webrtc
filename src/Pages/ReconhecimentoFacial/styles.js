@@ -21,11 +21,4 @@ export const TextOverlay = styled.div`
   }
 `;
 
-export const ValidateFacial = styled.img`
-  position: absolute;
-  top: 0;
-  margin: 0 auto;
-  z-index: 999;
-  height: 100vh;
-  overflow: hidden;
-`;
+

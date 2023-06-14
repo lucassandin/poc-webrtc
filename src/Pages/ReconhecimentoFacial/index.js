@@ -8,7 +8,6 @@ import Content from "../../Components/Content";
 
 import faceShape from "../../Assets/combined-shape.svg";
 import * as S from '../../Components/styles/styles';
-import * as SS from './styles';
 
 export default function ReconhecimentoFacial() {
   const navigate = useNavigate();
@@ -43,10 +42,10 @@ export default function ReconhecimentoFacial() {
       {/* central content */}
       <Content>
         <S.Row>
-          <SS.ValidateFacial src={faceShape} alt="Face shape" />
+          <S.ValidateShape src={faceShape} alt="Face shape" />
           <S.Column>
             <Camera
-              onTakePhoto={ (dataUri) => { handleTakePhoto(dataUri); } }
+              onTakePhotoAnimationDone={ (dataUri) => { handleTakePhoto(dataUri); } }
               idealFacingMode={FACING_MODES.USER}
               idealResolution={{width: 640, height: 480}}
               imageType={IMAGE_TYPES.JPG}

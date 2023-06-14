@@ -7,6 +7,7 @@ import 'react-html5-camera-photo/build/css/index.css';
 
 import Content from "../../Components/Content";
 
+import DocumentShape from "../../Assets/document-shape-2.svg";
 import * as S from '../../Components/styles/styles';
 
 export default function AnexoDocumentoVerso() {
@@ -38,6 +39,7 @@ export default function AnexoDocumentoVerso() {
       <Content>
         <S.Row>
           <S.Column>
+            <S.ValidateShape src={DocumentShape} alt="Documento shape" />
             <Camera
               onTakePhoto={ (dataUri) => { handleTakePhoto(dataUri); } }
               idealFacingMode={FACING_MODES.ENVIRONMENT}
