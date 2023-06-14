@@ -29,10 +29,10 @@ export default function ReconhecimentoFacial() {
 
   useEffect(() => {
     setHeaderBack(true)
-    setIsOverlay(true)
+    setIsOverlay("true")
 
     return () => {
-      setIsOverlay(false)
+      setIsOverlay("false")
     }
   })
 

@@ -4,12 +4,16 @@ export const Home = styled.div`
   /* border: 1px red solid; */
   height: calc(100vh);
   position: relative;
-  margin: ${props => props.isOverlay === true ? "0" : "0 1rem" };
+  margin: ${props => props.isoverlay === "true" ? "0" : "0 1rem" };
+
+  display: flex;
+  justify-content: center;
+  flex-flow: wrap;
 `;
 export const Header = styled.div`
   /* height: calc(10vh); */
   /* border: 1px blue solid; */
-  position: ${props => props.isOverlay === true ? "absolute" : "relative" };
+  position: ${props => props.isoverlay === "true" ? "absolute" : "relative" };
   top: 0;
   padding: 2.5vh 0;
   width: 100%;

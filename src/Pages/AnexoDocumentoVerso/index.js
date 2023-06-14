@@ -25,10 +25,10 @@ export default function AnexoDocumentoVerso() {
 
   useEffect(() => {
     setHeaderBack(true)
-    setIsOverlay(true)
+    setIsOverlay("true")
 
     return () => {
-      setIsOverlay(false)
+      setIsOverlay("false")
     }
   })
 

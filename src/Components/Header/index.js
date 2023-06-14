@@ -12,7 +12,7 @@ export default function Header() {
 
   return (
     // header
-    <S.Header isOverlay={isOverlay}>
+    <S.Header isoverlay={isOverlay}>
       <S.Row>
         <S.Column>
           {headerBack ? (

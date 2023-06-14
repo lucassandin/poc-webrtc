@@ -25,10 +25,10 @@ export default function AnexoDocumentoFrente() {
 
   useEffect(() => {
     setHeaderBack(true)
-    setIsOverlay(true)
+    setIsOverlay("true")
 
     return () => {
-      setIsOverlay(false)
+      setIsOverlay("false")
     }
   })
 
