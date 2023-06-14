@@ -26,7 +26,7 @@ export const Content = styled.div`
   height: inherit;
 `;
 export const Footer = styled.div`
-  /* border: 1px yellow solid; */
+  border: 1px yellow solid;
   /* height: calc(10vh); */
   position: absolute;
   width: calc(100% - 2px);
@@ -38,6 +38,9 @@ export const Footer = styled.div`
     padding: 0;
     margin-bottom: 1rem;
   } */
+
+  background: ${props => props.isoverlay === "true" ? "rgba(74, 74, 74, 0.8)" : "none" };
+  
 `;
 
 export const ButtonBack = styled.button`

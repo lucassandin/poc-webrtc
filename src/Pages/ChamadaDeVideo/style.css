@@ -24,7 +24,7 @@ video-subscribers {
   max-width: 70vw !important;
 
   position: absolute;
-  bottom: 0;
+  top: -30vh;
   right: 0;
 }
 

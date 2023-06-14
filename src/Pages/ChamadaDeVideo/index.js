@@ -75,15 +75,15 @@ export default function ChamadaDeVideo() {
         >
         </video-publisher>
       </S.Row>
-        <video-subscribers 
-          ref={subscribers}
-        ></video-subscribers>
-      <S.Row>
-      </S.Row>
     </Content>
 
     {/* footer content */}
     <Footer>
+      <S.Row>
+        <video-subscribers 
+          ref={subscribers}
+          ></video-subscribers>
+      </S.Row>
       <S.Row>
         <S.Column>
           <SS.ButtonGroup>
