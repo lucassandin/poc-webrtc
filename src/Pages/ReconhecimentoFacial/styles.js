@@ -21,12 +21,11 @@ export const TextOverlay = styled.div`
   }
 `;
 
-export const ValidateFacial = styled.span`
+export const ValidateFacial = styled.img`
   position: absolute;
-  margin: auto 0;
-  width: 60vw;
-  height: 45vh;
-  border-radius: 45%;
-  border: 100vw solid #4a4a4a7d;
+  top: 0;
+  margin: 0 auto;
   z-index: 999;
+  height: 100vh;
+  overflow: hidden;
 `;

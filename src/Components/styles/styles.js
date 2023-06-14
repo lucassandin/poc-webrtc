@@ -9,6 +9,8 @@ export const Home = styled.div`
   display: flex;
   justify-content: center;
   flex-flow: wrap;
+
+  overflow: hidden;
 `;
 export const Header = styled.div`
   /* height: calc(10vh); */
@@ -23,15 +25,6 @@ export const Content = styled.div`
   /* border: 1px green solid; */
   height: inherit;
   max-height: 70vh;
-
-  /* @media (min-width: 1080px) 
-  {
-    body
-    {
-      width: 50%;
-      margin: 0 auto;;
-    }
-  } */
 `;
 export const Footer = styled.div`
   /* border: 1px yellow solid; */
