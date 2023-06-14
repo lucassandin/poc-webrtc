@@ -7,7 +7,7 @@ import 'react-html5-camera-photo/build/css/index.css';
 import Content from "../../Components/Content";
 
 import * as S from '../../Components/styles/styles';
-import * as SS from './styles';
+// import * as SS from './styles';
 
 export default function ReconhecimentoFacial() {
   const navigate = useNavigate();
@@ -65,7 +65,6 @@ export default function ReconhecimentoFacial() {
                 <S.Span>Posicione o rosto dentro da marcação.</S.Span>
               </SS.TextOverlay>
             </S.Row> */}
-            <SS.ValidateFacial />
               <Camera
                 onTakePhoto = { (dataUri) => { handleTakePhoto(dataUri); } }
                 onTakePhotoAnimationDone = { (dataUri) => { handleTakePhotoAnimationDone(dataUri); } }
