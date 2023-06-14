@@ -58,7 +58,7 @@ export default function ReconhecimentoFacial() {
     <>
       {/* central content */}
       <Content>
-        {/* <Camera
+        <Camera
           onTakePhoto = { (dataUri) => { handleTakePhoto(dataUri); } }
           onTakePhotoAnimationDone = { (dataUri) => { handleTakePhotoAnimationDone(dataUri); } }
           onCameraError = { (error) => { handleCameraError(error); } }
@@ -70,12 +70,12 @@ export default function ReconhecimentoFacial() {
           isImageMirror = {false}
           isSilentMode = {false}
           isDisplayStartCameraError = {true}
-          isFullscreen = {false}
+          isFullscreen = {true}
           sizeFactor = {1}
           onCameraStart = { (stream) => { handleCameraStart(stream); } }
           onCameraStop = { () => { handleCameraStop(); } }
-        /> */}
-        <S.Row>
+        />
+        {/* <S.Row>
           <SS.ImagemContent>
             <SS.Img src={face} alt="Face" />
           </SS.ImagemContent>
@@ -91,7 +91,7 @@ export default function ReconhecimentoFacial() {
               <li>Caso use óculos, retire por favor!</li>
             </ol>
           </S.Span>
-        </S.Row>
+        </S.Row> */}
       </Content>
 
       {/* footer content */}

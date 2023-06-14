@@ -26,14 +26,14 @@ export default function DocumentoVisaoGeral() {
       <Content>
         <S.Row>
           <S.Column>
-              <SS.Div>Frente:</SS.Div>
+              <S.Span>Frente:</S.Span>
               <SS.Img src={frontDocument} alt="Documento frente" />
           </S.Column>
         </S.Row>
 
         <S.Row>
           <S.Column>
-              <SS.Div>Verso:</SS.Div>
+              <S.Span>Verso:</S.Span>
               <SS.Img src={backDocument} alt="Documento verso" />
           </S.Column>
         </S.Row>

@@ -4,6 +4,7 @@ export const Home = styled.div`
   /* border: 1px red solid; */
   height: calc(100vh);
   position: relative;
+  margin: 0 1rem;
 `;
 export const Header = styled.div`
   /* height: calc(10vh); */
@@ -16,7 +17,15 @@ export const Content = styled.div`
   /* border: 1px green solid; */
   height: inherit;
   max-height: 70vh;
-  margin: auto 0;
+
+  /* @media (min-width: 1080px) 
+  {
+    body
+    {
+      width: 50%;
+      margin: 0 auto;;
+    }
+  } */
 `;
 export const Footer = styled.div`
   /* border: 1px yellow solid; */
@@ -179,8 +188,6 @@ export const Span = styled.span`
   /* identical to box height */
   color: #000000;
   margin-top: 3rem;
-
-  width: 100%;
 `;
 
 export const Text = styled.span`

@@ -23,15 +23,6 @@ code {
     monospace;
 }
 
-@media (min-width: 1080px) 
-{
-  body
-  {
-    width: 50%;
-    margin: 0 auto;;
-  }
-}
-
 ul {
   padding: 0;
 }
