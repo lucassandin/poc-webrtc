@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useNavigateContext } from "../../Context/NavigateContext";
 import { useNavigate } from "react-router-dom";
 
-import verificandoConexao from "../../Assets/verificando-conexao.svg";
+import desenhoFacilOk from "../../Assets/desenho-facial-ok.svg";
 
 import Footer from "../../Components/Footer";
 import Content from "../../Components/Content";
@@ -24,18 +24,18 @@ export default function TesteConexao() {
       <Content>
         <S.Row>
           <SS.Location>
-            <img src={verificandoConexao} alt="Verificando conexao" />
+            <img src={desenhoFacilOk} alt="Teste conexao" />
           </SS.Location>
         </S.Row>
 
         <S.Row>
-          <S.Title>Estamos testando a sua conexão a internet.</S.Title>
+          <S.Title>Facial validada :)</S.Title>
         </S.Row>
 
         <S.Row>
           <S.Span>
-            Mantenha o telefone nessa tela para que ocorra tudo bem no teste de
-            conexão e possamos iniciar o atendimento.
+            Agora precisamos testar se a sua conexão com a internet está boa
+            para ocorra tudo certo com o seu atendimento
           </S.Span>
         </S.Row>
       </Content>
@@ -46,9 +46,11 @@ export default function TesteConexao() {
           <S.Column>
             <S.ButtonPrimary
               fullwidth="true"
-              onClick={() => navigate("/chamada-de-video/testeconexaook")}
+              onClick={() =>
+                navigate("/chamada-de-video/TesteConexaoVerificando")
+              }
             >
-              Continuar
+              Estou pronto
             </S.ButtonPrimary>
           </S.Column>
         </S.Row>

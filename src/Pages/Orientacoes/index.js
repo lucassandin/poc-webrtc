@@ -59,7 +59,7 @@ export default function Orientacoes() {
                 navigate("/chamada-de-video/reconhecimento-facial")
               }
             >
-              OK
+              Estou pronto
             </S.ButtonPrimary>
           </S.Column>
         </S.Row>
