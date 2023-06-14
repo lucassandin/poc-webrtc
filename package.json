@@ -48,6 +48,7 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "http-server": "^14.1.1"
+    "http-server": "^14.1.1",
+    "react-html5-camera-photo": "^1.5.11"
   }
 }

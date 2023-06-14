@@ -16,10 +16,14 @@ export default function TitularBeneficiario() {
       {/* central content */}
       <Content>
         <S.Row>
-          <h1>Antes de iniciamos, gostaríamos de te conhecer. :)</h1>
+          <S.Column>
+            <S.Title>Antes de iniciamos, gostaríamos de te conhecer. :)</S.Title>
+          </S.Column>
         </S.Row>
         <S.Row>
-          <p>Você é o titular do benefício?</p>
+          <S.Column>
+            <S.Span>Você é o titular do benefício?</S.Span>
+          </S.Column>
         </S.Row>
       </Content>
 

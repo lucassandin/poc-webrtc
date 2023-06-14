@@ -176,8 +176,11 @@ export const Span = styled.span`
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
+  /* identical to box height */
   color: #000000;
   margin-top: 3rem;
+
+  width: 100%;
 `;
 
 export const Text = styled.span`
