@@ -69,7 +69,7 @@ export default function ReconhecimentoFacial() {
                 onTakePhoto = { (dataUri) => { handleTakePhoto(dataUri); } }
                 onTakePhotoAnimationDone = { (dataUri) => { handleTakePhotoAnimationDone(dataUri); } }
                 onCameraError = { (error) => { handleCameraError(error); } }
-                idealFacingMode = {FACING_MODES.ENVIRONMENT}
+                idealFacingMode = {FACING_MODES.USER}
                 idealResolution = {{width: 640, height: 480}}
                 imageType = {IMAGE_TYPES.JPG}
                 imageCompression = {0.97}
