@@ -38,6 +38,9 @@ export const Footer = styled.div`
     padding: 0;
     margin-bottom: 1rem;
   } */
+
+  background: ${props => props.isoverlay === "true" ? "rgba(74, 74, 74, 0.8)" : "none" };
+  
 `;
 
 export const ButtonBack = styled.button`
