@@ -5,7 +5,6 @@
 // import Footer from "../../Components/Footer";
 // import Content from "../../Components/Content";
 
-
 // import * as S from '../../Components/styles/styles';
 
 // export default function Orientacoes() {
@@ -40,9 +39,6 @@
 //     </>
 //   )
 // }
-
-
-
 
 import React, { useEffect } from "react";
 import { useNavigateContext } from "../../Context/NavigateContext";
@@ -79,9 +75,7 @@ export default function TesteConexaoOk() {
         </S.Row>
 
         <S.Row>
-          <S.Span>
-          Estamos prontos para iniciar o atendimento.
-          </S.Span>
+          <S.Span>Estamos prontos para iniciar o atendimento.</S.Span>
         </S.Row>
       </Content>
 
@@ -93,7 +87,7 @@ export default function TesteConexaoOk() {
               fullwidth="true"
               onClick={() => navigate("/chamada-de-video")}
             >
-              Continuar
+              Estou pronto
             </S.ButtonPrimary>
           </S.Column>
         </S.Row>
