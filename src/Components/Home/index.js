@@ -8,7 +8,7 @@ export default function HomeComponent({ children }) {
 
   return (
     // home component
-    <S.Home isOverlay={isOverlay}>
+    <S.Home isoverlay={isOverlay}>
       { children }
     </S.Home>
   )

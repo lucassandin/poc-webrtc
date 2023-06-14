@@ -20,11 +20,16 @@ import './style.css';
 
 export default function ChamadaDeVideo() {
   const navigate = useNavigate();
-  const { setHeaderBack } = useNavigateContext();
-
+  const { setHeaderBack, setIsOverlay } = useNavigateContext();
+  
   useEffect(() => {
     setHeaderBack(true)
-  }) 
+    setIsOverlay("true")
+
+    return () => {
+      setIsOverlay("false")
+    }
+  })
   
   // Get references to Web Components
   const publisher = useRef(null);

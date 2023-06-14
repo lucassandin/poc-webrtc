@@ -21,12 +21,4 @@ export const TextOverlay = styled.div`
   }
 `;
 
-export const ValidateFacial = styled.span`
-  position: absolute;
-  margin: auto 0;
-  width: 60vw;
-  height: 45vh;
-  border-radius: 45%;
-  border: 100vw solid #4a4a4a7d;
-  z-index: 999;
-`;
+

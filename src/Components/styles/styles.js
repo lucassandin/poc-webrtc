@@ -4,12 +4,18 @@ export const Home = styled.div`
   /* border: 1px red solid; */
   height: calc(100vh);
   position: relative;
-  margin: ${props => props.isOverlay === true ? "0" : "0 1rem" };
+  margin: ${props => props.isoverlay === "true" ? "0" : "0 1rem" };
+
+  display: flex;
+  justify-content: center;
+  flex-flow: wrap;
+
+  overflow: hidden;
 `;
 export const Header = styled.div`
   /* height: calc(10vh); */
   /* border: 1px blue solid; */
-  position: ${props => props.isOverlay === true ? "absolute" : "relative" };
+  position: ${props => props.isoverlay === "true" ? "absolute" : "relative" };
   top: 0;
   padding: 2.5vh 0;
   width: 100%;
@@ -18,16 +24,6 @@ export const Header = styled.div`
 export const Content = styled.div`
   /* border: 1px green solid; */
   height: inherit;
-  max-height: 70vh;
-
-  /* @media (min-width: 1080px) 
-  {
-    body
-    {
-      width: 50%;
-      margin: 0 auto;;
-    }
-  } */
 `;
 export const Footer = styled.div`
   /* border: 1px yellow solid; */
@@ -38,10 +34,10 @@ export const Footer = styled.div`
   padding: 2.5vh 0 10vh;
   z-index: 9999;
 
-  @media (min-height: 480px) {
+  /* @media (min-height: 480px) {
     padding: 0;
     margin-bottom: 1rem;
-  }
+  } */
 `;
 
 export const ButtonBack = styled.button`
@@ -199,4 +195,13 @@ export const Text = styled.span`
   font-size: 20px;
   line-height: 23px;
   color: #000000;
+`;
+
+export const ValidateShape = styled.img`
+  position: absolute;
+  top: 0;
+  margin: 0 auto;
+  z-index: 999;
+  height: 100vh;
+  overflow: hidden;
 `;

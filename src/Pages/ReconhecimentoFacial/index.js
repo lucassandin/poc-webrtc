@@ -6,6 +6,7 @@ import 'react-html5-camera-photo/build/css/index.css';
 
 import Content from "../../Components/Content";
 
+import faceShape from "../../Assets/combined-shape.svg";
 import * as S from '../../Components/styles/styles';
 
 export default function ReconhecimentoFacial() {
@@ -29,10 +30,10 @@ export default function ReconhecimentoFacial() {
 
   useEffect(() => {
     setHeaderBack(true)
-    setIsOverlay(true)
+    setIsOverlay("true")
 
     return () => {
-      setIsOverlay(false)
+      setIsOverlay("false")
     }
   })
 
@@ -41,6 +42,7 @@ export default function ReconhecimentoFacial() {
       {/* central content */}
       <Content>
         <S.Row>
+          <S.ValidateShape src={faceShape} alt="Face shape" />
           <S.Column>
             <Camera
               onTakePhoto={ (dataUri) => { handleTakePhoto(dataUri); } }
