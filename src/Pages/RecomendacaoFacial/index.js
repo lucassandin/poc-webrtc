@@ -35,7 +35,8 @@ export default function RecomendacaoFacial() {
             <ul>
               <li>Posicione seu rosto dentro da marcação.</li>
               <li>Esteja em um lugar com boa iluminação.</li>
-              <li>Caso use óculos, retire por favor!</li>
+              <li>Evite utilizar óculos, boné ou coisas que tampem alguma parte do seu rosto.</li>
+              <li>Se necessário peça ajuda a alguém de confiança.</li>
             </ul>
         </S.Row>
       </Content>
