@@ -26,7 +26,7 @@ export const Content = styled.div`
   height: inherit;
 `;
 export const Footer = styled.div`
-  border: 1px yellow solid;
+  /* border: 1px yellow solid; */
   /* height: calc(10vh); */
   position: absolute;
   width: calc(100% - 2px);
