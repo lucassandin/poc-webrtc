@@ -109,8 +109,9 @@ export const ButtonSecondary = styled.button`
 export const Title = styled.span`
   font-style: normal;
   font-weight: 700;
-  font-size: 32px;
-  line-height: 37px;
+  font-size: 24px;
+  line-height: 28px;
+
   color: #000000;
   margin-top: 1rem;
 `;

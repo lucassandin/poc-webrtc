@@ -17,7 +17,7 @@ export const Warning = styled.div`
 `;
 
 export const Img = styled.img`
-  width: 40px;
-  height: 40px;
+  width: 100px;
+  height: 100px;
   margin: 0 auto;
 `;
