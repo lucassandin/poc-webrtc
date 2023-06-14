@@ -19,12 +19,12 @@ video-subscribers {
   border-radius: 4px;
   margin: 0 auto !important;
 
-  width: calc(100vw - 30vw) !important;
-  height: 30vh !important;
+  width: calc(100vw - 70vw) !important;
+  height: 20vh !important;
   max-width: 70vw !important;
 
   position: absolute;
-  top: -30vh;
+  top: -20vh;
   right: 0;
 }
 
