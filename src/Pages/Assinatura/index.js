@@ -24,9 +24,9 @@ export default function Assinatura() {
       {/* central content */}
       <Content>
         <S.Row>
-          <SS.Warning>
+          <S.IconeCentral>
             <SS.Img src={documentoAssinatura} alt="Assinatura" />
-          </SS.Warning>
+          </S.IconeCentral>
         </S.Row>
         <S.Row>
           <S.Title>Documento para assinar</S.Title>

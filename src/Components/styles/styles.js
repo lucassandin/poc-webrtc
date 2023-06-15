@@ -210,3 +210,19 @@ export const ValidateShape = styled.img`
   height: 100vh;
   overflow: hidden;
 `;
+
+export const IconeCentral = styled.div`
+  display: inherit;
+  justify-content: center;
+  margin: 5rem 0 2rem;
+  flex-direction: column;
+  text-align: center;
+
+  @media (max-height: 667px) {
+    display: inherit;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 1rem 0 0;
+  }
+`;

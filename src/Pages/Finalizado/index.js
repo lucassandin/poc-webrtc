@@ -23,9 +23,9 @@ export default function Finalizado() {
       {/* central content */}
       <Content>
         <S.Row>
-          <SS.Warning>
+          <S.IconeCentral>
             <SS.Img src={emojiFeliz} alt="Emoji feliz" />
-          </SS.Warning>
+          </S.IconeCentral>
         </S.Row>
         <S.Row>
           <S.Title>Atendimento finalizado, para acessar seu benefício siga o passo a passo:</S.Title>

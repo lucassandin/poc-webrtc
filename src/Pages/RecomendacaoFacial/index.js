@@ -24,9 +24,9 @@ export default function RecomendacaoFacial() {
       {/* central content */}
       <Content>
         <S.Row>
-          <SS.Warning>
+          <S.IconeCentral>
             <SS.Img src={userself} alt="Selfie" />
-          </SS.Warning>
+          </S.IconeCentral>
         </S.Row>
         <S.Row>
           <S.Title>Agora iremos precisar de fazer o reconhecimento facial.</S.Title>

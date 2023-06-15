@@ -2,11 +2,10 @@ import React, { useEffect,  } from "react"
 import { useNavigateContext } from "../../Context/NavigateContext"
 import { useNavigate } from "react-router-dom";
 
-import location from "../../Assets/location.svg";
+import location from "../../Assets/icon-location.png";
 
 import Footer from "../../Components/Footer";
 import Content from "../../Components/Content";
-
 
 import * as S from '../../Components/styles/styles';
 import * as SS from './styles';
@@ -24,9 +23,9 @@ export default function Permissao() {
       {/* central content */}
       <Content>
         <S.Row>
-        <SS.Location>
-          <img src={location} alt="Location" />
-        </SS.Location>
+          <S.IconeCentral>
+            <SS.Img src={location} alt="Ícone de localização" />
+          </S.IconeCentral>
         </S.Row>
         <S.Row>
           <S.Title>Permitir que o app tenha acesso a localização do dispositivo?</S.Title>
