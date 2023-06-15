@@ -18,7 +18,7 @@ export default function DocumentosRecebidos() {
     setHeaderBack(true);
   });
 
-  return (
+  return ( 
     <>
       {/* central content */}
       <Content>
