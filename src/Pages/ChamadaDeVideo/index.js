@@ -74,19 +74,19 @@ export default function ChamadaDeVideo() {
     {/* central content */}
     <Content>
       <S.Row>
-        <video-publisher 
-          ref={publisher}
-        >
-        </video-publisher>
+        <video-subscribers 
+          ref={subscribers}
+          ></video-subscribers>
       </S.Row>
     </Content>
 
     {/* footer content */}
     <Footer>
       <S.Row>
-        <video-subscribers 
-          ref={subscribers}
-          ></video-subscribers>
+        <video-publisher 
+          ref={publisher}
+        >
+        </video-publisher>
       </S.Row>
       <S.Row>
         <S.Column>

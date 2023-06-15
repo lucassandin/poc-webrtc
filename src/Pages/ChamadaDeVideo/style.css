@@ -8,17 +8,6 @@ video-subscribers {
   border-radius: 4px;
   margin: 0 auto !important;
 
-  width: calc(100vw) !important;
-  height: 100vh !important;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.OT_subscriber  {
-  border-radius: 4px;
-  margin: 0 auto !important;
-
   width: calc(100vw - 70vw) !important;
   height: 20vh !important;
   max-width: 70vw !important;
@@ -26,17 +15,31 @@ video-subscribers {
   position: absolute;
   top: -20vh;
   right: 0;
+
+  
+}
+
+.OT_subscriber  {
+  border-radius: 4px;
+  margin: 0 auto !important;
+
+  width: calc(100vw) !important;
+  height: 100vh !important;
+
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 @media (min-width: 1366px) {
   
-  /* .OT_publisher {
-    width: 30vw !important;
-    max-width: 70vw !important;
-  } */
-
-  .OT_subscriber  {
+  .OT_publisher {
     width: 30vw !important;
     max-width: 70vw !important;
   }
+
+  /* .OT_subscriber  {
+    width: 30vw !important;
+    max-width: 70vw !important;
+  } */
 }
