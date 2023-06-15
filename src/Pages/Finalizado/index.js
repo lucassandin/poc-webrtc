@@ -6,7 +6,6 @@ import emojiFeliz from "../../Assets/emoji-feliz.png";
 
 import Footer from "../../Components/Footer";
 import Content from "../../Components/Content";
-import Dropzone from "../../Components/Dropzone";
 
 import * as S from '../../Components/styles/styles';
 import * as SS from './styles';
