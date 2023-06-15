@@ -32,7 +32,7 @@ export default function ChamadaDeVideo() {
     return () => {
       setIsOverlay("false")
     }
-  })
+  }, [setHeaderBack, setIsOverlay])
   
   // Get references to Web Components
   const publisher = useRef(null);
