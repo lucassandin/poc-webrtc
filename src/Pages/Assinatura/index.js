@@ -2,15 +2,16 @@ import React, { useEffect,  } from "react"
 import { useNavigateContext } from "../../Context/NavigateContext"
 import { useNavigate } from "react-router-dom";
 
-import location from "../../Assets/icon-location.png";
+import documentoAssinatura from "../../Assets/documento-assinatura.png";
 
 import Footer from "../../Components/Footer";
 import Content from "../../Components/Content";
+import Dropzone from "../../Components/Dropzone";
 
 import * as S from '../../Components/styles/styles';
 import * as SS from './styles';
 
-export default function Permissao() {
+export default function Assinatura() {
   const navigate = useNavigate();
   const { setHeaderBack } = useNavigateContext();
 
@@ -24,11 +25,19 @@ export default function Permissao() {
       <Content>
         <S.Row>
           <S.IconeCentral>
-            <SS.Img src={location} alt="Ícone de localização" />
+            <SS.Img src={documentoAssinatura} alt="Assinatura" />
           </S.IconeCentral>
         </S.Row>
         <S.Row>
-          <S.Title>Permitir que o app tenha acesso a localização do dispositivo?</S.Title>
+          <S.Title>Documento para assinar</S.Title>
+        </S.Row>
+        <S.Row>
+          <S.Span>
+            Para prosseguirmos com a abertura da sua conta é necessário assinar os documentos
+          </S.Span>
+        </S.Row>
+        <S.Row>
+          <Dropzone />
         </S.Row>
       </Content>
 
@@ -36,7 +45,7 @@ export default function Permissao() {
       <Footer>
         <S.Row>
           <S.Column>
-            <S.ButtonPrimary fullwidth="true"  onClick={() => navigate("/agendamento/recomendacao-facial")}>Dar permissão</S.ButtonPrimary>
+            <S.ButtonPrimary fullwidth="true"  onClick={() => navigate("/atendimento/finalizado")}>Assinar</S.ButtonPrimary>
           </S.Column>
         </S.Row>
       </Footer>

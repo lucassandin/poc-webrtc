@@ -74,25 +74,25 @@ export default function ChamadaDeVideo() {
     {/* central content */}
     <Content>
       <S.Row>
-        <video-publisher 
-          ref={publisher}
-        >
-        </video-publisher>
+        <video-subscribers 
+          ref={subscribers}
+          ></video-subscribers>
       </S.Row>
     </Content>
 
     {/* footer content */}
     <Footer>
       <S.Row>
-        <video-subscribers 
-          ref={subscribers}
-          ></video-subscribers>
+        <video-publisher 
+          ref={publisher}
+        >
+        </video-publisher>
       </S.Row>
       <S.Row>
         <S.Column>
           <SS.ButtonGroup>
             <SS.ButtonMedia onClick={toggleAudio}><img src={microfone} alt="Microfone" /></SS.ButtonMedia>
-            <SS.ButtonMedia onClick={() => navigate("/")}><img src={encerrar} alt="Encerrar" /></SS.ButtonMedia>
+            <SS.ButtonMedia onClick={() => navigate("/atendimento/assinatura")}><img src={encerrar} alt="Encerrar" /></SS.ButtonMedia>
             <SS.ButtonMedia onClick={toggleVideo}><img src={video} alt="Vídeo" /></SS.ButtonMedia>
           </SS.ButtonGroup>
         </S.Column>

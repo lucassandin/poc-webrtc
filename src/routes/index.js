@@ -29,8 +29,8 @@ const Orientacoes = lazy(() => import("../Pages/Orientacoes"));
 const TesteConexao = lazy(() => import("../Pages/TesteConexao"));
 const TesteConexaoVerificando = lazy(() => import("../Pages/TesteConexaoVerificando"));
 const TesteConexaoOk = lazy(() => import("../Pages/TesteConexaoOk"));
-
-
+const Assinatura = lazy(() => import("../Pages/Assinatura"));
+const Finalizado = lazy(() => import("../Pages/Finalizado"));
 
 const RoutesComponent = () => {
   return (
@@ -60,11 +60,13 @@ const RoutesComponent = () => {
               <Route path="/agendamento/documentos-recebidos" element={<DocumentosRecebidos />} />
               <Route path="/agendamento/confirmacao-agendamento" element={<ConfirmacaoAgendamento />} />
 
-              <Route path="/chamada-de-video/orientacoes" element={<Orientacoes />} />
-              <Route path="/chamada-de-video/reconhecimento-facial" element={<ReconhecimentoFacial />} />
-              <Route path="/chamada-de-video/testeconexao" element={<TesteConexao />} />
-              <Route path="/chamada-de-video/testeconexaoverificando" element={<TesteConexaoVerificando />} />
-              <Route path="/chamada-de-video/testeconexaook" element={<TesteConexaoOk />} />
+              <Route path="/atendimento/orientacoes" element={<Orientacoes />} />
+              <Route path="/atendimento/reconhecimento-facial" element={<ReconhecimentoFacial />} />
+              <Route path="/atendimento/testeconexao" element={<TesteConexao />} />
+              <Route path="/atendimento/testeconexaoverificando" element={<TesteConexaoVerificando />} />
+              <Route path="/atendimento/testeconexaook" element={<TesteConexaoOk />} />
+              <Route path="/atendimento/assinatura" element={<Assinatura />} />
+              <Route path="/atendimento/finalizado" element={<Finalizado />} />
 
               <Route path="*" element={<NotFound />} />
             </Routes>

@@ -2,7 +2,7 @@ import React, { useEffect,  } from "react"
 import { useNavigateContext } from "../../Context/NavigateContext"
 import { useNavigate } from "react-router-dom";
 
-import location from "../../Assets/icon-location.png";
+import emojiFeliz from "../../Assets/emoji-feliz.png";
 
 import Footer from "../../Components/Footer";
 import Content from "../../Components/Content";
@@ -10,7 +10,7 @@ import Content from "../../Components/Content";
 import * as S from '../../Components/styles/styles';
 import * as SS from './styles';
 
-export default function Permissao() {
+export default function Finalizado() {
   const navigate = useNavigate();
   const { setHeaderBack } = useNavigateContext();
 
@@ -24,11 +24,18 @@ export default function Permissao() {
       <Content>
         <S.Row>
           <S.IconeCentral>
-            <SS.Img src={location} alt="Ícone de localização" />
+            <SS.Img src={emojiFeliz} alt="Emoji feliz" />
           </S.IconeCentral>
         </S.Row>
         <S.Row>
-          <S.Title>Permitir que o app tenha acesso a localização do dispositivo?</S.Title>
+          <S.Title>Atendimento finalizado, para acessar seu benefício siga o passo a passo:</S.Title>
+        </S.Row>
+        <S.Row>
+          <ul>
+            <li>Baixe nosso App na loja do seu aplicativo clicando aqui</li>
+            <li>Faça login conforme as orientações do atendente.</li>
+            <li>Se necessário peça ajuda a alguém de confiança.</li>
+          </ul>
         </S.Row>
       </Content>
 
@@ -36,7 +43,7 @@ export default function Permissao() {
       <Footer>
         <S.Row>
           <S.Column>
-            <S.ButtonPrimary fullwidth="true"  onClick={() => navigate("/agendamento/recomendacao-facial")}>Dar permissão</S.ButtonPrimary>
+            <S.ButtonPrimary fullwidth="true"  onClick={() => navigate("/")}>Obrigado</S.ButtonPrimary>
           </S.Column>
         </S.Row>
       </Footer>

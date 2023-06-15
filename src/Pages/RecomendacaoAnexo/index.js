@@ -27,13 +27,13 @@ export default function RecomendacaoAnexo() {
           <S.Title>Legal, agora vamos precisar de uma foto de seus documentos.</S.Title>
         </S.Row>
         <S.Row>
-          <SS.Warning>
+          <S.IconeCentral>
             <SS.Img src={warning} alt="warning" />
 
             <div>
               Importante
             </div>
-          </SS.Warning>
+          </S.IconeCentral>
         </S.Row>
         <S.Row>
           <S.Span>

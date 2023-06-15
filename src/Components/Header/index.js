@@ -8,13 +8,13 @@ import * as S from '../../Components/styles/styles';
 
 export default function Header() {
   const navigate = useNavigate()
-  const { headerBack, isOverlay } = useNavigateContext();
+  const { headerBack, isOverlay, titleHeader } = useNavigateContext();
 
   return (
     // header
     <S.Header isoverlay={isOverlay}>
       <S.Row>
-        <S.Column>
+        <S.Column datawidth={"true"}>
           {headerBack ? (
             <S.ButtonBack onClick={() => navigate(-1)}>
               <img src={setaVoltar} alt="Voltar" />
@@ -23,12 +23,16 @@ export default function Header() {
         </S.Column>
 
         <S.Column>
-          <div>
-            <S.Logo fullwidth={(headerBack ? "true" : "false")} src={logo} alt="Logo" />
-          </div>
+            {titleHeader !== "" ? (
+              <S.LogoTitle fullwidth={(headerBack ? "true" : "false")}>{titleHeader}</S.LogoTitle>
+            ) : (
+              <div>
+                <S.Logo fullwidth={(headerBack ? "true" : "false")} src={logo} alt="Logo" />
+              </div>
+            )}
         </S.Column>
 
-        <S.Column>
+        <S.Column datawidth={"true"}>
         </S.Column>
       </S.Row>
     </S.Header>
