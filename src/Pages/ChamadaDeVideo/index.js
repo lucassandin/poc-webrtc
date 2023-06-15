@@ -32,7 +32,7 @@ export default function ChamadaDeVideo() {
     return () => {
       setIsOverlay("false")
     }
-  }, [setHeaderBack, setIsOverlay])
+  })
   
   // Get references to Web Components
   const publisher = useRef(null);
@@ -96,9 +96,9 @@ export default function ChamadaDeVideo() {
       <S.Row>
         <S.Column>
           <SS.ButtonGroup>
-            <SS.ButtonMedia muted={muteClick} onClick={toggleAudio}><img src={microfone} alt="Microfone" /></SS.ButtonMedia>
-            <SS.ButtonMedia ended={endCallClick} onClick={() => navigate("/atendimento/assinatura")}><img src={encerrar} alt="Encerrar" /></SS.ButtonMedia>
-            <SS.ButtonMedia videomuted={videoClick} onClick={toggleVideo}><img src={video} alt="Vídeo" /></SS.ButtonMedia>
+            <SS.ButtonMedia onClick={toggleAudio}><img src={microfone} alt="Microfone" /></SS.ButtonMedia>
+            <SS.ButtonMedia  onClick={() => navigate("/atendimento/assinatura")}><img src={encerrar} alt="Encerrar" /></SS.ButtonMedia>
+            <SS.ButtonMedia onClick={toggleVideo}><img src={video} alt="Vídeo" /></SS.ButtonMedia>
           </SS.ButtonGroup>
         </S.Column>
       </S.Row>
