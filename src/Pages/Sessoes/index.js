@@ -57,13 +57,13 @@ export default function Sessoes() {
             sessions.map(s => {
               return (
                 <S.InputGroupd key={s.Id}>
-                  <CopyToClipboard text={`${process.env.REACT_APP_REACT_APP}/chamada-de-video/${s.Id}/cliente`}>
+                  <CopyToClipboard text={`${process.env.REACT_APP_REACT_APP}/atendimento/${s.Id}/cliente`}>
                     <S.ButtonClipBoard >Copy to clipboard</S.ButtonClipBoard>
                   </CopyToClipboard>
 
                   <S.Button onClick={() => {
                     localStorage.setItem("publisher-token", s.Token);
-                    navigate(`/chamada-de-video/${s.Id}/operador`)
+                    navigate(`/atendimento/${s.Id}/operador`)
                   }}>Vídeo chamada</S.Button>
                 </S.InputGroupd>
               )

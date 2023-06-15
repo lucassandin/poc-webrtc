@@ -17,8 +17,8 @@ export default function ReconhecimentoFacial() {
 
 
   const handleNavigate=() => {
-    if (location.pathname === '/chamada-de-video/reconhecimento-facial') {
-      navigate("/chamada-de-video/testeconexao")
+    if (location.pathname === '/atendimento/reconhecimento-facial') {
+      navigate("/atendimento/testeconexao")
     } else {
       navigate("/agendamento/recomendacao-anexo")
     }

@@ -2,7 +2,7 @@ import React, { useEffect,  } from "react"
 import { useNavigateContext } from "../../Context/NavigateContext"
 import { useNavigate } from "react-router-dom";
 
-import documentoAssinatura from "../../Assets/documento-assinatura.png";
+import emojiFeliz from "../../Assets/emoji-feliz.png";
 
 import Footer from "../../Components/Footer";
 import Content from "../../Components/Content";
@@ -11,7 +11,7 @@ import Dropzone from "../../Components/Dropzone";
 import * as S from '../../Components/styles/styles';
 import * as SS from './styles';
 
-export default function Assinatura() {
+export default function Finalizado() {
   const navigate = useNavigate();
   const { setHeaderBack } = useNavigateContext();
 
@@ -25,19 +25,18 @@ export default function Assinatura() {
       <Content>
         <S.Row>
           <SS.Warning>
-            <SS.Img src={documentoAssinatura} alt="Assinatura" />
+            <SS.Img src={emojiFeliz} alt="Emoji feliz" />
           </SS.Warning>
         </S.Row>
         <S.Row>
-          <S.Title>Documento para assinar</S.Title>
+          <S.Title>Atendimento finalizado, para acessar seu benefício siga o passo a passo:</S.Title>
         </S.Row>
         <S.Row>
-          <S.Span>
-            Para prosseguirmos com a abertura da sua conta é necessário assinar os documentos
-          </S.Span>
-        </S.Row>
-        <S.Row>
-          <Dropzone />
+          <ul>
+            <li>Baixe nosso App na loja do seu aplicativo clicando aqui</li>
+            <li>Faça login conforme as orientações do atendente.</li>
+            <li>Se necessário peça ajuda a alguém de confiança.</li>
+          </ul>
         </S.Row>
       </Content>
 
@@ -45,7 +44,7 @@ export default function Assinatura() {
       <Footer>
         <S.Row>
           <S.Column>
-            <S.ButtonPrimary fullwidth="true"  onClick={() => navigate("/atendimento/finalizado")}>Assinar</S.ButtonPrimary>
+            <S.ButtonPrimary fullwidth="true"  onClick={() => navigate("/")}>Obrigado</S.ButtonPrimary>
           </S.Column>
         </S.Row>
       </Footer>

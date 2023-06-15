@@ -33,7 +33,7 @@ export default function TesteConexao() {
       <Footer>
         <S.Row>
           <S.Column>
-            <S.ButtonPrimary fullwidth="true"  onClick={() => navigate("/chamada-de-video/testeconexaoverificando")}>Estou pronto</S.ButtonPrimary>
+            <S.ButtonPrimary fullwidth="true"  onClick={() => navigate("/atendimento/testeconexaoverificando")}>Estou pronto</S.ButtonPrimary>
           </S.Column>
         </S.Row>
       </Footer>

@@ -38,7 +38,7 @@ export default function Orientacoes() {
       <Footer>
         <S.Row>
           <S.Column>
-            <S.ButtonPrimary fullwidth="true"  onClick={() => navigate("/chamada-de-video/reconhecimento-facial")}>Continuar</S.ButtonPrimary>
+            <S.ButtonPrimary fullwidth="true"  onClick={() => navigate("/atendimento/reconhecimento-facial")}>Continuar</S.ButtonPrimary>
           </S.Column>
         </S.Row>
       </Footer>
