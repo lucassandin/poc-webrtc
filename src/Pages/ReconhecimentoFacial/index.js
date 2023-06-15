@@ -12,7 +12,9 @@ import * as S from '../../Components/styles/styles';
 export default function ReconhecimentoFacial() {
   const navigate = useNavigate();
   const location = useLocation();
-  const { setHeaderBack, setIsOverlay } = useNavigateContext();
+  const { setHeaderBack, setIsOverlay, setTitleHeader } = useNavigateContext();
+  
+
 
   const handleNavigate=() => {
     if (location.pathname === '/chamada-de-video/reconhecimento-facial') {
@@ -31,9 +33,11 @@ export default function ReconhecimentoFacial() {
   useEffect(() => {
     setHeaderBack(true)
     setIsOverlay("true")
+    setTitleHeader("Validação facial")
 
     return () => {
       setIsOverlay("false")
+      setTitleHeader("")
     }
   })
 

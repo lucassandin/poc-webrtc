@@ -8,7 +8,7 @@ import * as S from '../../Components/styles/styles';
 
 export default function Header() {
   const navigate = useNavigate()
-  const { headerBack, isOverlay } = useNavigateContext();
+  const { headerBack, isOverlay, titleHeader } = useNavigateContext();
 
   return (
     // header
@@ -24,7 +24,11 @@ export default function Header() {
 
         <S.Column>
           <div>
-            <S.Logo fullwidth={(headerBack ? "true" : "false")} src={logo} alt="Logo" />
+            {titleHeader !== "" ? (
+              <S.LogoTitle fullwidth={(headerBack ? "true" : "false")}>{titleHeader}</S.LogoTitle>
+            ) : (
+              <S.Logo fullwidth={(headerBack ? "true" : "false")} src={logo} alt="Logo" />
+            )}
           </div>
         </S.Column>
 

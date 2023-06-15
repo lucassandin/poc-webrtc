@@ -71,6 +71,21 @@ export const Logo = styled.img`
   padding: 0 5rem;
 `;
 
+export const LogoTitle = styled.span`
+  width: ${props => props.fullwidth === "true" ? "139px" : "234px"};
+  margin: ${props => props.fullwidth === "true" ? "0" : "3vh 0px"}; ;
+  height: 34px;
+  padding: 0 5rem;
+
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+
+  color: #FFFFFF;
+  margin-top: 1rem;
+`;
+
 export const Casal = styled.img`
   width: 267px;
   height: 376px;
