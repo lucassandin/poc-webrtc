@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import { useNavigateContext } from "../../Context/NavigateContext";
 
@@ -21,6 +21,9 @@ import './style.css';
 export default function ChamadaDeVideo() {
   const navigate = useNavigate();
   const { setHeaderBack, setIsOverlay } = useNavigateContext();
+  const [muteClick, setMuteClick] = useState(false);
+  const [videoClick, setVideoClick] = useState(false);
+  const endCallClick = false;
   
   useEffect(() => {
     setHeaderBack(true)
@@ -43,10 +46,12 @@ export default function ChamadaDeVideo() {
 
   const toggleVideo = () => {
     publisher.current.toggleVideo();
+    setVideoClick(!videoClick)
   };
 
   const toggleAudio = () => {
     publisher.current.toggleAudio();
+    setMuteClick(!muteClick);
   };
 
   useEffect(() => {
@@ -91,9 +96,9 @@ export default function ChamadaDeVideo() {
       <S.Row>
         <S.Column>
           <SS.ButtonGroup>
-            <SS.ButtonMedia onClick={toggleAudio}><img src={microfone} alt="Microfone" /></SS.ButtonMedia>
-            <SS.ButtonMedia onClick={() => navigate("/atendimento/assinatura")}><img src={encerrar} alt="Encerrar" /></SS.ButtonMedia>
-            <SS.ButtonMedia onClick={toggleVideo}><img src={video} alt="Vídeo" /></SS.ButtonMedia>
+            <SS.ButtonMedia muted={muteClick} onClick={toggleAudio}><img src={microfone} alt="Microfone" /></SS.ButtonMedia>
+            <SS.ButtonMedia ended={endCallClick} onClick={() => navigate("/atendimento/assinatura")}><img src={encerrar} alt="Encerrar" /></SS.ButtonMedia>
+            <SS.ButtonMedia videomuted={videoClick} onClick={toggleVideo}><img src={video} alt="Vídeo" /></SS.ButtonMedia>
           </SS.ButtonGroup>
         </S.Column>
       </S.Row>

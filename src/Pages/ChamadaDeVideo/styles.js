@@ -24,5 +24,12 @@ export const ButtonMedia = styled.button`
   padding: 1rem;
   width: 80px;
   height: 80px;
-  background: #D9D9D9;
+  background: ${props => 
+  (props.muted === false || 
+    props.videomuted === false || 
+    props.ended === false) ? "#D9D9D9" : "#ff0023ba" };
+
+  &:active {
+    background: #919191;
+  }
 `;
