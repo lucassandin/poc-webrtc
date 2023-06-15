@@ -9,11 +9,9 @@ export const Home = styled.div`
   display: flex;
   justify-content: center;
   flex-flow: wrap;
-
   overflow: hidden;
 `;
 export const Header = styled.div`
-  /* height: calc(10vh); */
   /* border: 1px blue solid; */
   position: ${props => props.isoverlay === "true" ? "absolute" : "relative" };
   top: 0;
@@ -27,20 +25,12 @@ export const Content = styled.div`
 `;
 export const Footer = styled.div`
   /* border: 1px yellow solid; */
-  /* height: calc(10vh); */
   position: absolute;
   width: calc(100% - 2px);
   bottom: 0;
   padding: 2.5vh 0 10vh;
   z-index: 9999;
-
-  /* @media (min-height: 480px) {
-    padding: 0;
-    margin-bottom: 1rem;
-  } */
-
   background: ${props => props.isoverlay === "true" ? "rgba(74, 74, 74, 0.8)" : "none" };
-  
 `;
 
 export const ButtonBack = styled.button`
@@ -59,7 +49,8 @@ export const Column = styled.div`
   display: inherit;
   flex-direction: column;
   justify-content: center;
-  width: 100%;
+  /* width: 100%; */
+  width: ${props => props.datawidth === "true" ? "3rem" : "100%" };
   align-items: center;
 `;
 
@@ -72,10 +63,8 @@ export const Logo = styled.img`
 `;
 
 export const LogoTitle = styled.span`
-  width: ${props => props.fullwidth === "true" ? "139px" : "234px"};
   margin: ${props => props.fullwidth === "true" ? "0" : "3vh 0px"}; ;
   height: 34px;
-  padding: 0 5rem;
 
   font-style: normal;
   font-weight: 700;
@@ -83,7 +72,6 @@ export const LogoTitle = styled.span`
   line-height: 28px;
 
   color: #FFFFFF;
-  margin-top: 1rem;
 `;
 
 export const Casal = styled.img`
@@ -98,7 +86,6 @@ export const Casal = styled.img`
 
 export const ButtonPrimary = styled.button`
   border: solid 1px blue;
-  /* width: 195px; */
   width: ${props => props.fullwidth === "true" ? "100%" : "157px"};
 
   height: 60px;

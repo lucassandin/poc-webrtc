@@ -92,7 +92,7 @@ export default function ChamadaDeVideo() {
         <S.Column>
           <SS.ButtonGroup>
             <SS.ButtonMedia onClick={toggleAudio}><img src={microfone} alt="Microfone" /></SS.ButtonMedia>
-            <SS.ButtonMedia onClick={() => navigate("/")}><img src={encerrar} alt="Encerrar" /></SS.ButtonMedia>
+            <SS.ButtonMedia onClick={() => navigate("/chamada-de-video/assinatura")}><img src={encerrar} alt="Encerrar" /></SS.ButtonMedia>
             <SS.ButtonMedia onClick={toggleVideo}><img src={video} alt="Vídeo" /></SS.ButtonMedia>
           </SS.ButtonGroup>
         </S.Column>

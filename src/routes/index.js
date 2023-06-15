@@ -29,6 +29,7 @@ const Orientacoes = lazy(() => import("../Pages/Orientacoes"));
 const TesteConexao = lazy(() => import("../Pages/TesteConexao"));
 const TesteConexaoVerificando = lazy(() => import("../Pages/TesteConexaoVerificando"));
 const TesteConexaoOk = lazy(() => import("../Pages/TesteConexaoOk"));
+const Assinatura = lazy(() => import("../Pages/Assinatura"));
 
 
 
@@ -65,6 +66,7 @@ const RoutesComponent = () => {
               <Route path="/chamada-de-video/testeconexao" element={<TesteConexao />} />
               <Route path="/chamada-de-video/testeconexaoverificando" element={<TesteConexaoVerificando />} />
               <Route path="/chamada-de-video/testeconexaook" element={<TesteConexaoOk />} />
+              <Route path="/chamada-de-video/assinatura" element={<Assinatura />} />
 
               <Route path="*" element={<NotFound />} />
             </Routes>
