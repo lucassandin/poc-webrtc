@@ -15,3 +15,14 @@ export const Div = styled.div`
   text-align: start;
   width: 100%;
 `;
+
+export const DocumentDesciption = styled.span`
+  color: #ffffff;
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+`;
+
+export const Olho = styled.img``;
