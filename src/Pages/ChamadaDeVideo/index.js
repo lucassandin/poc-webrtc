@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useRef, useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
 import { useNavigateContext } from "../../Context/NavigateContext";
 
@@ -21,9 +21,6 @@ import './style.css';
 export default function ChamadaDeVideo() {
   const navigate = useNavigate();
   const { setHeaderBack, setIsOverlay } = useNavigateContext();
-  const [muteClick, setMuteClick] = useState(false);
-  const [videoClick, setVideoClick] = useState(false);
-  const endCallClick = false;
   
   useEffect(() => {
     setHeaderBack(true)
@@ -46,12 +43,10 @@ export default function ChamadaDeVideo() {
 
   const toggleVideo = () => {
     publisher.current.toggleVideo();
-    setVideoClick(!videoClick)
   };
 
   const toggleAudio = () => {
     publisher.current.toggleAudio();
-    setMuteClick(!muteClick);
   };
 
   useEffect(() => {
