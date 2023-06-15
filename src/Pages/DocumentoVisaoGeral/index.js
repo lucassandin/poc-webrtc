@@ -84,13 +84,7 @@ export default function DocumentoVisaoGeral() {
               <SS.Img src={backDocument} alt="Documento verso" />
             </div>
           </S.Column>
-        </S.Row>
-        <S.Row>
-          <S.Span>
-            <div>Importante:</div>
-            Posicione seu documento dentro da marcação.
-          </S.Span>
-        </S.Row>
+        </S.Row>        
       </Content>
 
       {/* footer content */}
