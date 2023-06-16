@@ -9,7 +9,7 @@ export const Home = styled.div`
   display: flex;
   justify-content: center;
   flex-flow: wrap;
-  overflow: hidden;
+  /* overflow: hidden; */
 `;
 export const Header = styled.div`
   /* border: 1px blue solid; */
@@ -21,14 +21,15 @@ export const Header = styled.div`
 `;
 export const Content = styled.div`
   /* border: 1px green solid; */
-  height: inherit;
+  /* height: inherit; */
 `;
 export const Footer = styled.div`
   /* border: 1px yellow solid; */
-  position: absolute;
+  /* position: absolute;
+  bottom: 0; */
   width: calc(100% - 2px);
-  bottom: 0;
-  padding: 2.5vh 0 10vh;
+  height: 10vh;
+  /* padding: 2.5vh 0 10vh; */
   z-index: 9999;
   background: ${props => props.isoverlay === "true" ? "rgba(74, 74, 74, 0.8)" : "none" };
 `;

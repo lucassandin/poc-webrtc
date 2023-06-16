@@ -44,7 +44,9 @@ export default function ReconhecimentoFacial() {
   return (
     <>
       {/* central content */}
-      <Content>
+      <Content style={{
+        overflow: "hidden"
+      }}>
         <S.Row>
           <S.ValidateShape src={faceShape} alt="Face shape" />
           <S.Column>

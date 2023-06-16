@@ -38,7 +38,9 @@ export default function AnexoDocumentoVerso() {
   return (
     <>
       {/* central content */}
-      <Content>
+      <Content style={{
+        overflow: "hidden"
+      }}>
         <S.Row>
           <S.Column>
             <S.ValidateShape src={DocumentShape} alt="Documento shape" />

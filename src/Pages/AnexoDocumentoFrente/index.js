@@ -38,7 +38,9 @@ export default function AnexoDocumentoFrente() {
   return (
     <>
       {/* central content */}
-      <Content>
+      <Content style={{
+        overflow: "hidden"
+      }}>
         <S.Row>
           <S.Column>
             <S.ValidateShape src={DocumentShape} alt="Documento shape" />
