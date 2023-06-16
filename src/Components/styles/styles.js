@@ -9,7 +9,7 @@ export const Home = styled.div`
   display: flex;
   justify-content: center;
   flex-flow: wrap;
-  /* overflow: hidden; */
+  overflow: hidden;
 `;
 export const Header = styled.div`
   /* border: 1px blue solid; */
@@ -21,7 +21,7 @@ export const Header = styled.div`
 `;
 export const Content = styled.div`
   /* border: 1px green solid; */
-  height: inherit;
+  /* height: inherit; */
 `;
 export const Footer = styled.div`
   /* border: 1px yellow solid; */
@@ -203,7 +203,7 @@ export const Span = styled.span`
   line-height: 21px;
   /* identical to box height */
   color: #000000;
-  margin-top: 3rem;
+  /* margin-top: 3rem; */
 `;
 
 export const Text = styled.span`
@@ -219,8 +219,8 @@ export const ValidateShape = styled.img`
   top: 0;
   margin: 0 auto;
   z-index: 999;
-  height: 100vh;
   overflow: hidden;
+  height: 100vh;
 `;
 
 export const IconeCentral = styled.div`

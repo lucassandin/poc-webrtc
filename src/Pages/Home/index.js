@@ -25,7 +25,7 @@ export default function Home() {
           <S.Casal src={casal} alt="Casal" loading="lazy"/>
         </S.Row>
         <S.Row>
-          <h1>Vídeo Chamada</h1>
+          <S.Title>Vídeo Chamada</S.Title>
         </S.Row>
         <S.Row>
           <p>Lorem Ipsum is simply dummy text of.....</p>

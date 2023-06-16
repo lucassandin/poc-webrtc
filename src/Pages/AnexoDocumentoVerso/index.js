@@ -41,7 +41,7 @@ export default function AnexoDocumentoVerso() {
       <Content style={{
         overflow: "hidden"
       }}>
-        <S.Row>
+        <S.Row >
           <S.Column>
             <S.ValidateShape src={DocumentShape} alt="Documento shape" />
             <Camera
