@@ -149,7 +149,7 @@ export const InputContent = styled.div`
   width: 100%;
 
   overflow: scroll;
-  height: 50vh;
+  height: 40vh;
 `;
 
 export const InputGroup = styled.div`
