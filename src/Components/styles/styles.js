@@ -21,7 +21,7 @@ export const Header = styled.div`
 `;
 export const Content = styled.div`
   /* border: 1px green solid; */
-  /* height: inherit; */
+  height: inherit;
 `;
 export const Footer = styled.div`
   /* border: 1px yellow solid; */
@@ -33,6 +33,17 @@ export const Footer = styled.div`
   z-index: 9999;
   background: ${props => props.isoverlay === "true" ? "rgba(74, 74, 74, 0.8)" : "none" };
 `;
+
+export const FooterVideo = styled.div`
+  /* border: 1px yellow solid; */
+  position: absolute;
+  bottom: 0;
+  width: calc(100% - 2px);
+  padding: 2.5vh 0 10vh;
+  z-index: 9999;
+  background: ${props => props.isoverlay === "true" ? "rgba(74, 74, 74, 0.8)" : "none" };
+`;
+
 
 export const ButtonBack = styled.button`
   border: none;

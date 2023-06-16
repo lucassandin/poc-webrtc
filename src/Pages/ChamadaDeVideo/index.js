@@ -10,7 +10,7 @@ import video from "../../Assets/video.png";
 import microfone from "../../Assets/microfone.png";
 import encerrar from "../../Assets/encerrar-chamada.png";
 
-import Footer from "../../Components/Footer";
+import FooterVideo from "../../Components/FooterVideo";
 import Content from "../../Components/Content";
 
 
@@ -81,7 +81,7 @@ export default function ChamadaDeVideo() {
     </Content>
 
     {/* footer content */}
-    <Footer>
+    <FooterVideo>
       <S.Row>
         <video-publisher 
           ref={publisher}
@@ -97,7 +97,7 @@ export default function ChamadaDeVideo() {
           </SS.ButtonGroup>
         </S.Column>
       </S.Row>
-    </Footer>
+    </FooterVideo>
   </>
   );
 }
