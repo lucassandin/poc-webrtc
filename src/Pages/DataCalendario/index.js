@@ -1,4 +1,4 @@
-import React, { useEffect,  } from "react"
+import React, { useCallback, useEffect, useState,  } from "react"
 import { useNavigateContext } from "../../Context/NavigateContext"
 import { useNavigate } from "react-router-dom";
 
@@ -11,10 +11,28 @@ import * as S from '../../Components/styles/styles';
 export default function DataCalendario() {
   const navigate = useNavigate();
   const { setHeaderBack } = useNavigateContext();
+  const [datasAtuais, setDataAtuais] = useState([]);
+
+  const handleGenerateData = useCallback(() => {
+    const currentDate = new Date();
+    // new Date().toLocaleDateString('pt-br', { weekday:"long", year:"numeric", month:"short", day:"numeric"}) 
+
+    let dataArray = [];
+    for (let i = 0; i <= 10; i++) {
+      dataArray.push(
+        currentDate.setDate(currentDate.getDate() + 1)
+      );
+    }
+    setDataAtuais(dataArray)
+  }, [])
 
   useEffect(() => {
     setHeaderBack(true)
   })
+
+  useEffect(() => {
+    handleGenerateData();
+  }, [handleGenerateData])
 
   return (
     <>
@@ -25,7 +43,15 @@ export default function DataCalendario() {
         </S.Row>
         <S.Row>
           <S.InputContent>
-            <S.InputGroup>
+            {datasAtuais.map(e => {
+              return (
+                <S.InputGroup key={e}>
+                  
+                  <S.Input type="check" name="data" placeholder={new Date(e).toLocaleDateString()} readOnly />
+                </S.InputGroup>
+              )
+            })}
+            {/* <S.InputGroup>
               <S.Input type="check" name="data" placeholder="26/02/2024" readOnly />
             </S.InputGroup>
 
@@ -47,7 +73,7 @@ export default function DataCalendario() {
 
             <S.InputGroup>
               <S.Input type="check" name="data" placeholder="26/02/2024" readOnly />
-            </S.InputGroup>
+            </S.InputGroup> */}
           </S.InputContent>
         </S.Row>
       </Content>
