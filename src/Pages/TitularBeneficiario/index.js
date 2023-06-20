@@ -1,5 +1,6 @@
-import React from "react"
+import React, { useEffect,  } from "react"
 import { useNavigate } from "react-router-dom";
+import { useNavigateContext } from "../../Context/NavigateContext"
 
 import Footer from "../../Components/Footer";
 import Content from "../../Components/Content";
@@ -11,7 +12,12 @@ import * as SS from './styles';
 
 export default function TitularBeneficiario() {
   const navigate = useNavigate();
- 
+  const { setHeaderBack, setBackgroundColor } = useNavigateContext();
+
+  useEffect(() => {
+    setHeaderBack(true)
+    setBackgroundColor('true')
+  })
 
   return (
     <>
@@ -22,14 +28,23 @@ export default function TitularBeneficiario() {
             <SS.Img src={iconOla} alt="Ícone dizendo olá" />
           </S.IconeCentral>
         </S.Row>
-        <S.Row>
+        <S.Row  style={{
+          marginTop: '20px'
+        }}>
           <S.Column>
             <S.Title>Antes de iniciamos, gostaríamos de te conhecer. :)</S.Title>
           </S.Column>
         </S.Row>
         <S.Row>
           <S.Column>
-            <S.Span>Você é o titular do benefício?</S.Span>
+            <div
+              style={{
+                width: '90vw',
+                marginTop: '30px'
+              }}
+            >
+              <S.Span>Você é o titular do benefício?</S.Span>
+            </div>
           </S.Column>
         </S.Row>
       </Content>

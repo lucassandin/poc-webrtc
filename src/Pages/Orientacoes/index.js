@@ -29,7 +29,9 @@ export default function Orientacoes() {
           </SS.Location>
         </S.Row>
 
-        <S.Row>
+        <S.Row style={{
+          marginTop: '20px'
+        }}>
           <S.Title>
             Agora iremos precisar de fazer o reconhecimento facial.
           </S.Title>

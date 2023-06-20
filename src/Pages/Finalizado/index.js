@@ -28,10 +28,14 @@ export default function Finalizado() {
             <SS.Img src={emojiFeliz} alt="Emoji feliz" />
           </S.IconeCentral>
         </S.Row>
-        <S.Row>
+        <S.Row style={{
+          marginTop: '20px'
+        }}>
           <S.Title>Atendimento finalizado, para acessar seu benefício siga o passo a passo:</S.Title>
         </S.Row>
-        <S.Row>
+        <S.Row style={{
+          marginTop: '20px'
+        }}>
           <ul>
             <li>Baixe nosso App na loja do seu aplicativo clicando aqui</li>
             <li>Faça login conforme as orientações do atendente.</li>

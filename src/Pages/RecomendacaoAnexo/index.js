@@ -32,7 +32,9 @@ export default function RecomendacaoAnexoDocumento() {
           </SS.Location>
         </S.Row>
 
-        <S.Row>
+        <S.Row  style={{
+          marginTop: '20px'
+        }}>
           <S.Title>
             Tudo certo com a facial, agora iremos precisar do seu documento.
           </S.Title>

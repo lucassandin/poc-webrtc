@@ -2,8 +2,8 @@ import React, { useEffect } from "react";
 import { useNavigateContext } from "../../Context/NavigateContext";
 import { useNavigate } from "react-router-dom";
 
-import frontDocument from "../../Assets/front-document-no-border.png";
-import backDocument from "../../Assets/back-document-no-border.png";
+import frontDocument from "../../Assets/documents/frente.png";
+import backDocument from "../../Assets/documents/verso.png";
 
 import olho from "../../Assets/olho.png";
 
@@ -15,7 +15,7 @@ import * as SS from "./styles";
 
 export default function DocumentoVisaoGeral() {
   const navigate = useNavigate();
-  const { setHeaderBack, setBackgroundColor  } = useNavigateContext();
+  const { setHeaderBack, setBackgroundColor } = useNavigateContext();
 
   useEffect(() => {
     setHeaderBack(true);
@@ -27,15 +27,31 @@ export default function DocumentoVisaoGeral() {
       {/* central content */}
       <Content>
         <S.Row>
-          <S.Title>Confira as capturas</S.Title>
+          <div
+            style={{
+              width: '90vw',
+            }}
+          >
+            <S.Title>Confira as capturas</S.Title>
+          </div>
         </S.Row>
         <S.Row>
-          <S.Span>
-            Caso não tenha ficado bom, sinta-se a vontade de refazer as fotos e
-            nos enviar!
-          </S.Span>
+          <div
+            style={{
+              width: '90vw',
+              marginTop: '30px'
+            }}
+          >
+            <S.Span>
+              Caso não tenha ficado bom, sinta-se a vontade de refazer as fotos e
+              nos enviar!
+            </S.Span>
+          </div>
         </S.Row>
-        <S.Row>
+        <S.Row 
+              style={{
+                marginTop: '20px'
+              }}>
           <S.Column>
             <div
               style={{
@@ -53,6 +69,7 @@ export default function DocumentoVisaoGeral() {
                   alignItems: "center",
                 }}
               >
+                <SS.CardRound />
                 <SS.DocumentDesciption>Frente</SS.DocumentDesciption>
                 <SS.Olho src={olho} alt="Documento frente" />
               </div>
@@ -79,13 +96,14 @@ export default function DocumentoVisaoGeral() {
                   alignItems: "center",
                 }}
               >
+                <SS.CardRound />
                 <SS.DocumentDesciption>Verso</SS.DocumentDesciption>
                 <SS.Olho src={olho} alt="Documento verso" />
               </div>
               <SS.Img src={backDocument} alt="Documento verso" />
             </div>
           </S.Column>
-        </S.Row>        
+        </S.Row>
       </Content>
 
       {/* footer content */}

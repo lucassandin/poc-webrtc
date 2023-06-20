@@ -28,7 +28,9 @@ export default function Permissao() {
             <SS.Img src={location} alt="Ícone de localização" />
           </S.IconeCentral>
         </S.Row>
-        <S.Row>
+        <S.Row style={{
+          marginTop: '20px'
+        }}>
           <S.Title>Permitir que o app tenha acesso a localização do dispositivo?</S.Title>
         </S.Row>
       </Content>

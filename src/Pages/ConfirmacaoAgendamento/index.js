@@ -28,7 +28,9 @@ export default function ConfirmacaoAgendamento() {
             <SS.Img src={conexaoOk} alt="Ampola" />
           </S.IconeCentral>
         </S.Row>
-        <S.Row>
+        <S.Row style={{
+          marginTop: '20px'
+        }}>
           <S.Title>Agendamento feito!</S.Title>
         </S.Row>
         <S.Row>

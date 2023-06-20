@@ -29,7 +29,9 @@ export default function Assinatura() {
             <SS.Img src={documentoAssinatura} alt="Assinatura" />
           </S.IconeCentral>
         </S.Row>
-        <S.Row>
+        <S.Row style={{
+          marginTop: '20px'
+        }}>
           <S.Title>Documento para assinar</S.Title>
         </S.Row>
         <S.Row>

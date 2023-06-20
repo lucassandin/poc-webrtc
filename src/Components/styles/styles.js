@@ -209,7 +209,6 @@ export const Title = styled.span`
   font-size: 24px;
   line-height: 28px;
   color: #000000;
-  margin-top: 1rem;
 `;
 
 export const Span = styled.span`
