@@ -54,14 +54,14 @@ export default function ReconhecimentoFacial() {
                 handleTakePhoto(dataUri);
               }}
               idealFacingMode={FACING_MODES.USER}
-              idealResolution={{ width: 640, height: 480 }}
+              // idealResolution={{ width: 640, height: 480 }}
               imageType={IMAGE_TYPES.JPG}
               imageCompression={0.97}
               isMaxResolution={true}
-              isImageMirror={false}
+              isImageMirror={true}
               isSilentMode={false}
-              isDisplayStartCameraError={true}
-              isFullscreen={true}
+              isDisplayStartCameraError={false}
+              isFullscreen={false}
               sizeFactor={1}
             />
           </S.Column>
