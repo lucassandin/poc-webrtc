@@ -45,10 +45,7 @@ li {
 }
 
 #container-circles { 
-  z-index: 999;
-}
-
-#container-circles {
   position: absolute;
-  bottom: 150px;
+  bottom: 150px !important;
+  z-index: 999;
 }

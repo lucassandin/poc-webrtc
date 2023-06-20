@@ -29,7 +29,7 @@ export const Footer = styled.div`
   position: fixed;
   bottom: 0;
   width: calc(100% - 2rem);
-  height: 10vh;
+  height: 6vh;
   padding: 2.5vh 0 10vh;
   z-index: 9999;
   background: ${props => props.isoverlay === "true" ? "rgba(74, 74, 74, 0.8)" : "none" };
@@ -50,6 +50,7 @@ export const ButtonBack = styled.button`
   border: none;
   background: none;
   max-width: 6rem;
+  margin-left: 2rem;
 `;
 
 export const Row = styled.div`
@@ -130,15 +131,7 @@ export const ButtonSecondary = styled.button`
   color: #1526FF;
 `;
 
-export const Title = styled.span`
-  font-style: normal;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 28px;
 
-  color: #000000;
-  margin-top: 1rem;
-`;
 
 export const InputContent = styled.div`
   display: inherit;
@@ -195,14 +188,22 @@ export const Input = styled.input`
   }
 `;
 
+export const Title = styled.span`
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  color: #000000;
+  margin-top: 1rem;
+`;
+
 export const Span = styled.span`
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
-  /* identical to box height */
   color: #000000;
-  /* margin-top: 3rem; */
+  margin-top: 1rem;
 `;
 
 export const Text = styled.span`
@@ -225,7 +226,7 @@ export const ValidateShape = styled.img`
 export const IconeCentral = styled.div`
   display: inherit;
   justify-content: center;
-  margin: 5rem 0 2rem;
+  margin: 1rem 0 ;
   flex-direction: column;
   text-align: center;
 
