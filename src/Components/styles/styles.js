@@ -223,7 +223,7 @@ export const ValidateShape = styled.img`
   margin: 0 auto;
   z-index: 999;
   overflow: hidden;
-  /* height: 100vh; */
+  height: 100%;
 `;
 
 export const IconeCentral = styled.div`
