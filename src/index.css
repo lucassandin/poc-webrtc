@@ -62,6 +62,6 @@ li {
 
 #container-circles { 
   position: absolute;
-  bottom: 100px !important;
+  bottom: 150px !important;
   z-index: 999;
 }

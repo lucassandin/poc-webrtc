@@ -18,8 +18,6 @@ export default function ReconhecimentoFacial() {
     if (location.pathname === "/atendimento/reconhecimento-facial") {
       navigate("/atendimento/testeconexao");
     } else {
-      // navigate("/agendamento/recomendacao-anexo")
-
       navigate("/agendamento/recomendacao-anexo");
     }
   };
@@ -49,7 +47,7 @@ export default function ReconhecimentoFacial() {
         overflow: "hidden"
       }}>
         <S.Row>
-          <S.ValidateShape src={faceShape} alt="Face shape" />
+          {/* <S.ValidateShape src={faceShape} alt="Face shape" /> */}
           <S.Column>
             <Camera
               onTakePhoto={(dataUri) => {
