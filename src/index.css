@@ -47,3 +47,8 @@ li {
 #container-circles { 
   z-index: 999;
 }
+
+#container-circles {
+  position: absolute;
+  bottom: 150px;
+}

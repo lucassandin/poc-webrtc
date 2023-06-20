@@ -2,7 +2,7 @@ import { styled } from "styled-components";
 
 export const Home = styled.div`
   /* border: 1px red solid; */
-  height: calc(100vh);
+  height: ${props => props.isoverlay !== "true" ? "none" : "100vh" };
   position: relative;
   margin: ${props => props.isoverlay === "true" ? "0" : "0 1rem" };
 
@@ -15,21 +15,22 @@ export const Header = styled.div`
   /* border: 1px blue solid; */
   position: ${props => props.isoverlay === "true" ? "absolute" : "relative" };
   top: 0;
-  padding: 2.5vh 0;
-  width: 100%;
+  padding: 2.5vh 0 0 0;
   z-index: 9999;
+  width: 100%;
 `;
 export const Content = styled.div`
   /* border: 1px green solid; */
-  /* height: inherit; */
+  margin-top: 20px;
+  height: 50%;
 `;
 export const Footer = styled.div`
   /* border: 1px yellow solid; */
-  /* position: absolute;
-  bottom: 0; */
-  width: calc(100% - 2px);
+  position: fixed;
+  bottom: 0;
+  width: calc(100% - 2rem);
   height: 10vh;
-  /* padding: 2.5vh 0 10vh; */
+  padding: 2.5vh 0 10vh;
   z-index: 9999;
   background: ${props => props.isoverlay === "true" ? "rgba(74, 74, 74, 0.8)" : "none" };
 `;
@@ -87,11 +88,9 @@ export const LogoTitle = styled.span`
 `;
 
 export const Casal = styled.img`
-  width: 267px;
-  height: 376px;
+  height: 45vh;
 
   @media (max-height: 480px) {
-    width: 20vw;
     height: 30vh;
   }
 `;
