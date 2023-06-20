@@ -78,8 +78,20 @@ li {
   z-index: 999;
 }
 
+.button {
+  border: 1px solid #A5A5A5;
+  border-radius: 4px;
+  height: 60px;
+  background: #ffffff;
+  color: #1526FF;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+}
 
-/* .react-html5-camera-photo-fullscreen>img, .react-html5-camera-photo-fullscreen>video {
-  width: 80vw !important;
-  height: 80vh !important;
-} */
+.button:hover{
+  background: #1526FF;
+  color: #ffffff;
+}

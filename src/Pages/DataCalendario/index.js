@@ -16,8 +16,6 @@ export default function DataCalendario() {
 
   const handleGenerateData = useCallback(() => {
     const currentDate = new Date();
-    // new Date().toLocaleDateString('pt-br', { weekday:"long", year:"numeric", month:"short", day:"numeric"}) 
-
     let dataArray = [];
     for (let i = 0; i <= 10; i++) {
       dataArray.push(
@@ -48,11 +46,7 @@ export default function DataCalendario() {
             {datasAtuais.map(e => {
               return (
                 <S.InputGroup key={e}>
-                  <S.Input type="check" name="data" placeholder={new Date(e).toLocaleDateString()} readOnly 
-                    style={{
-                      textAlign: 'center',
-                    }}
-                  />
+                  <button className="button" type="button">{new Date(e).toLocaleDateString()}</button>
                 </S.InputGroup>
               )
             })}

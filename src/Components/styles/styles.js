@@ -166,6 +166,18 @@ export const Input = styled.input`
   height: 60px;
   padding-left: 1rem;
 
+  ${(props) => (
+    props.frchangeinputselected === 'true' && 
+    css`
+      background: #1526FF;
+      border: 2px solid #fff;
+      
+      &&::placeholder {
+        color: #fff;
+      }
+    `
+  )}
+
   &::-webkit-input-placeholder { /* Edge */
     font-style: normal;
     font-weight: 700;

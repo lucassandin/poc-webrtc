@@ -1,10 +1,9 @@
-import React, { useEffect,  } from "react"
+import React, { useEffect } from "react"
 import { useNavigateContext } from "../../Context/NavigateContext"
 import { useNavigate } from "react-router-dom";
 
 import Footer from "../../Components/Footer";
 import Content from "../../Components/Content";
-
 
 import * as S from '../../Components/styles/styles';
 import * as C from './styles';
@@ -28,51 +27,27 @@ export default function Hora() {
         <S.Row>
           <C.InputContent>
             <S.InputGroup>
-              <S.Input type="check" name="hora" placeholder="12:00" readOnly 
-                style={{
-                  textAlign: 'center'
-                }}
-              />
+              <button className="button" type="button">12:00</button>
             </S.InputGroup>
 
             <S.InputGroup>
-              <S.Input type="check" name="hora" placeholder="12:30" readOnly  
-                style={{
-                  textAlign: 'center'
-                }}
-              />
+              <button className="button" type="button">12:30</button>
             </S.InputGroup>
 
             <S.InputGroup>
-              <S.Input type="check" name="hora" placeholder="13:00" readOnly 
-                style={{
-                  textAlign: 'center'
-                }}
-              />
+              <button className="button" type="button">13:00</button>
             </S.InputGroup>
 
             <S.InputGroup>
-              <S.Input type="check" name="hora" placeholder="13:30" readOnly 
-                style={{
-                  textAlign: 'center'
-                }}
-              />
+              <button className="button" type="button">13:30</button>
             </S.InputGroup>
 
             <S.InputGroup>
-              <S.Input type="check" name="hora" placeholder="14:00" readOnly 
-                style={{
-                  textAlign: 'center'
-                }}
-              />
+              <button className="button" type="button">14:00</button>
             </S.InputGroup>
 
             <S.InputGroup>
-              <S.Input type="check" name="hora" placeholder="14:30" readOnly 
-                style={{
-                  textAlign: 'center'
-                }}
-              />
+              <button className="button" type="button">14:30</button>
             </S.InputGroup>
           </C.InputContent>
         </S.Row>
