@@ -2,6 +2,7 @@
   /* Hide scrollbar for IE, Edge and Firefox */
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
+  margin: 0;
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
@@ -23,8 +24,9 @@ code {
     monospace;
 }
 
-ul {
+ul ol {
   padding: 0;
+  margin: 0;
 }
 
 li::before {
@@ -46,6 +48,6 @@ li {
 
 #container-circles { 
   position: absolute;
-  bottom: 200px !important;
+  bottom: 100px !important;
   z-index: 999;
 }

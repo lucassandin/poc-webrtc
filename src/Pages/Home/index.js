@@ -11,10 +11,11 @@ import * as S from '../../Components/styles/styles';
 
 export default function Home() {
   const navigate = useNavigate();
-  const { setHeaderBack } = useNavigateContext();
+  const { setHeaderBack, setBackgroundColor } = useNavigateContext();
 
   useEffect(() => {
     setHeaderBack(false)
+    setBackgroundColor('false')
   })
 
   return (

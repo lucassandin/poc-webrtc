@@ -1,4 +1,4 @@
-import { styled } from "styled-components";
+import { styled, css } from "styled-components";
 
 export const Home = styled.div`
   /* border: 1px red solid; */
@@ -16,16 +16,17 @@ export const Header = styled.div`
   /* border: 1px red solid; */
   position: ${props => props.isoverlay === "true" ? "absolute" : "relative" };
   top: 0;
-  display: inherit;
-  justify-content: center;
-  align-items: center;
-  height: 70px;
-  width: 100%;
+  z-index: 9999;
+  padding: 1rem;
+  background-color: ${props => props.background === "true" ? "#1526FF" : "none" };
+  ${(props) => (props.isoverlay === "true" && css`
+    width: 88vw;
+  `)}
 `;
 
 export const Content = styled.div`
   /* border: 1px green solid; */
-  margin-top: 20px;
+  padding-top: ${props => props.isoverlay === "true" ? "0" : "20px" };
   height: 50%;
 `;
 
@@ -73,7 +74,7 @@ export const Column = styled.div`
 
 export const Logo = styled.img`
   /* margin: 0 auto; */
-  width: ${props => props.fullwidth === "true" ? "139px" : "234px"};
+  /* width: ${props => props.fullwidth === "true" ? "139px" : "234px"}; */
   margin: ${props => props.fullwidth === "true" ? "0" : "3vh 0px"}; ;
   height: 34px;
   padding: 0 5rem;

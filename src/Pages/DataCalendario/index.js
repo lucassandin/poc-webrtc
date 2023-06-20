@@ -11,7 +11,7 @@ import * as C from './styles';
 
 export default function DataCalendario() {
   const navigate = useNavigate();
-  const { setHeaderBack } = useNavigateContext();
+  const { setHeaderBack, setBackgroundColor  } = useNavigateContext();
   const [datasAtuais, setDataAtuais] = useState([]);
 
   const handleGenerateData = useCallback(() => {
@@ -29,6 +29,7 @@ export default function DataCalendario() {
 
   useEffect(() => {
     setHeaderBack(true)
+    setBackgroundColor('true')
   })
 
   useEffect(() => {

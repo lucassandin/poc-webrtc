@@ -11,10 +11,11 @@ import * as C from './styles';
 
 export default function Hora() {
   const navigate = useNavigate();
-  const { setHeaderBack } = useNavigateContext();
+  const { setHeaderBack, setBackgroundColor  } = useNavigateContext();
 
   useEffect(() => {
     setHeaderBack(true)
+    setBackgroundColor('true')
   })
 
   return (

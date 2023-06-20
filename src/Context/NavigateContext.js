@@ -6,9 +6,12 @@ export const NavigateProvider = ({ children }) => {
   const [headerBack, setHeaderBack] = useState(false);
   const [isOverlay, setIsOverlay] = useState("false");
   const [titleHeader, setTitleHeader] = useState("");
+  const [backgroundColor, setBackgroundColor] = useState("true");
 
   return (
     <NavigateContext.Provider value={{ 
+      backgroundColor, 
+      setBackgroundColor,
       headerBack, 
       setHeaderBack, 
       isOverlay, 

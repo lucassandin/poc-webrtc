@@ -12,10 +12,11 @@ import * as SS from "./styles";
 
 export default function TesteConexaoVerificando() {
   const navigate = useNavigate();
-  const { setHeaderBack } = useNavigateContext();
+  const { setHeaderBack, setBackgroundColor  } = useNavigateContext();
 
   useEffect(() => {
     setHeaderBack(true);
+    setBackgroundColor('true')
   });
 
   return (

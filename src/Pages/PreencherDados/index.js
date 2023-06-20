@@ -10,10 +10,11 @@ import * as S from '../../Components/styles/styles';
 
 export default function PreencherDados() {
   const navigate = useNavigate();
-  const { setHeaderBack } = useNavigateContext();
+  const { setHeaderBack, setBackgroundColor } = useNavigateContext();
 
   useEffect(() => {
     setHeaderBack(true)
+    setBackgroundColor('true')
   })
 
   return (
