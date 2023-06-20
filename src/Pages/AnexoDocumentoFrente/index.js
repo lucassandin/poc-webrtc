@@ -12,7 +12,7 @@ import * as S from '../../Components/styles/styles';
 
 export default function AnexoDocumentoFrente() {
   const navigate = useNavigate();
-  const { setHeaderBack, setIsOverlay, setTitleHeader } = useNavigateContext();
+  const { setHeaderBack, setIsOverlay, setTitleHeader, setBackgroundColor } = useNavigateContext();
 
   const handleNavigate=() => {
     navigate("/agendamento/documento-verso")
@@ -27,6 +27,7 @@ export default function AnexoDocumentoFrente() {
   useEffect(() => {
     setHeaderBack(true)
     setIsOverlay("true")
+    setBackgroundColor("false");
     setTitleHeader("Frente do documento")
 
     return () => {

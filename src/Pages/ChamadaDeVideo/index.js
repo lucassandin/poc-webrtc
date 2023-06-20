@@ -20,11 +20,12 @@ import './style.css';
 
 export default function ChamadaDeVideo() {
   const navigate = useNavigate();
-  const { setHeaderBack, setIsOverlay } = useNavigateContext();
+  const { setHeaderBack, setIsOverlay, setBackgroundColor } = useNavigateContext();
   
   useEffect(() => {
     setHeaderBack(true)
     setIsOverlay("true")
+    setBackgroundColor("false");
 
     return () => {
       setIsOverlay("false")

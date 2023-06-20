@@ -12,7 +12,7 @@ import * as S from '../../Components/styles/styles';
 
 export default function AnexoDocumentoVerso() {
   const navigate = useNavigate();
-  const { setHeaderBack, setIsOverlay, setTitleHeader } = useNavigateContext();
+  const { setHeaderBack, setIsOverlay, setTitleHeader, setBackgroundColor } = useNavigateContext();
 
   const handleNavigate=() => {
     navigate("/agendamento/documento-visao-geral")
@@ -27,6 +27,7 @@ export default function AnexoDocumentoVerso() {
   useEffect(() => {
     setHeaderBack(true)
     setIsOverlay("true")
+    setBackgroundColor("false");
     setTitleHeader("Verso do documento")
     
     return () => {
