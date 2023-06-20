@@ -61,7 +61,7 @@ export default function ReconhecimentoFacial() {
               isImageMirror={true}
               isSilentMode={false}
               isDisplayStartCameraError={false}
-              isFullscreen={false}
+              isFullscreen={true}
               sizeFactor={1}
             />
           </S.Column>
