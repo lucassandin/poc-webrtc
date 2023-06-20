@@ -65,3 +65,9 @@ li {
   bottom: 180px !important;
   z-index: 999;
 }
+
+
+.react-html5-camera-photo-fullscreen>img, .react-html5-camera-photo-fullscreen>video {
+  width: 80vw !important;
+  height: 80vh !important;
+}
