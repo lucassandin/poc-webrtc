@@ -47,7 +47,7 @@ export default function ReconhecimentoFacial() {
         overflow: "hidden"
       }}>
         <S.Row>
-          <S.ValidateShape src={faceShape} alt="Face shape" />
+          {/* <S.ValidateShape src={faceShape} alt="Face shape" /> */}
           <S.Column>
             <Camera
               onTakePhoto={(dataUri) => {
