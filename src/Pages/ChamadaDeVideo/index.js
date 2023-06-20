@@ -63,6 +63,8 @@ export default function ChamadaDeVideo() {
     // screenshare.current.session = session;
     // screenshare.current.token = token;
 
+    session.connect(token);
+
     return () => {
       session.disconnect();
     }
