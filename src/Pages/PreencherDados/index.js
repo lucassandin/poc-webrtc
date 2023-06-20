@@ -27,17 +27,17 @@ export default function PreencherDados() {
           <S.InputContent>
             <S.InputGroup>
               <S.Label>CPF</S.Label>
-              <S.Input name="cpf" placeholder="CPF"/>
+              <S.Input name="cpf" placeholder="Digite seu CPF"/>
             </S.InputGroup>
 
             <S.InputGroup>
-              <S.Label>NOME</S.Label>
-              <S.Input name="nome" placeholder="NOME"/>
+              <S.Label>Nome</S.Label>
+              <S.Input name="nome" placeholder="Informe o nome"/>
             </S.InputGroup>
 
             <S.InputGroup>
-              <S.Label>CELULAR</S.Label>
-              <S.Input name="celular" placeholder="CELULAR"/>
+              <S.Label>Celular</S.Label>
+              <S.Input name="celular" placeholder="Informe o celular"/>
             </S.InputGroup>
           </S.InputContent>
         </S.Row>

@@ -7,7 +7,7 @@ import 'react-html5-camera-photo/build/css/index.css';
 
 import Content from "../../Components/Content";
 
-import DocumentShape from "../../Assets/document-shape-2.svg";
+import DocumentShape from "../../Assets/shape/documento.svg";
 import * as S from '../../Components/styles/styles';
 
 export default function AnexoDocumentoFrente() {

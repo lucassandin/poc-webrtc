@@ -7,6 +7,7 @@ import Content from "../../Components/Content";
 
 
 import * as S from '../../Components/styles/styles';
+import * as C from './styles';
 
 export default function Hora() {
   const navigate = useNavigate();
@@ -24,31 +25,55 @@ export default function Hora() {
           <S.Title>Agora escolha o horário para o seu agendamento:</S.Title>
         </S.Row>
         <S.Row>
-          <S.InputContent>
+          <C.InputContent>
             <S.InputGroup>
-              <S.Input type="check" name="hora" placeholder="12:00" readOnly />
+              <S.Input type="check" name="hora" placeholder="12:00" readOnly 
+                style={{
+                  textAlign: 'center'
+                }}
+              />
             </S.InputGroup>
 
             <S.InputGroup>
-              <S.Input type="check" name="hora" placeholder="12:30" readOnly />
+              <S.Input type="check" name="hora" placeholder="12:30" readOnly  
+                style={{
+                  textAlign: 'center'
+                }}
+              />
             </S.InputGroup>
 
             <S.InputGroup>
-              <S.Input type="check" name="hora" placeholder="13:00" readOnly />
+              <S.Input type="check" name="hora" placeholder="13:00" readOnly 
+                style={{
+                  textAlign: 'center'
+                }}
+              />
             </S.InputGroup>
 
             <S.InputGroup>
-              <S.Input type="check" name="hora" placeholder="13:30" readOnly />
+              <S.Input type="check" name="hora" placeholder="13:30" readOnly 
+                style={{
+                  textAlign: 'center'
+                }}
+              />
             </S.InputGroup>
 
             <S.InputGroup>
-              <S.Input type="check" name="hora" placeholder="14:00" readOnly />
+              <S.Input type="check" name="hora" placeholder="14:00" readOnly 
+                style={{
+                  textAlign: 'center'
+                }}
+              />
             </S.InputGroup>
 
             <S.InputGroup>
-              <S.Input type="check" name="hora" placeholder="14:30" readOnly />
+              <S.Input type="check" name="hora" placeholder="14:30" readOnly 
+                style={{
+                  textAlign: 'center'
+                }}
+              />
             </S.InputGroup>
-          </S.InputContent>
+          </C.InputContent>
         </S.Row>
       </Content>
 

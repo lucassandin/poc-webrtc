@@ -11,27 +11,31 @@ export const Home = styled.div`
   flex-flow: wrap;
   overflow: hidden;
 `;
+
 export const Header = styled.div`
-  /* border: 1px blue solid; */
+  /* border: 1px red solid; */
   position: ${props => props.isoverlay === "true" ? "absolute" : "relative" };
   top: 0;
-  padding: 2.5vh 0 0 0;
-  z-index: 9999;
+  display: inherit;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
   width: 100%;
 `;
+
 export const Content = styled.div`
   /* border: 1px green solid; */
   margin-top: 20px;
   height: 50%;
 `;
+
 export const Footer = styled.div`
   /* border: 1px yellow solid; */
+  width: calc(100% - 2rem);
   position: fixed;
   bottom: 0;
-  width: calc(100% - 2rem);
-  height: 6vh;
-  padding: 2.5vh 0 10vh;
   z-index: 9999;
+  margin-bottom: 40px;
   background: ${props => props.isoverlay === "true" ? "rgba(74, 74, 74, 0.8)" : "none" };
 `;
 
@@ -45,12 +49,10 @@ export const FooterVideo = styled.div`
   background: ${props => props.isoverlay === "true" ? "rgba(74, 74, 74, 0.8)" : "none" };
 `;
 
-
 export const ButtonBack = styled.button`
   border: none;
   background: none;
   max-width: 6rem;
-  margin-left: 2rem;
 `;
 
 export const Row = styled.div`
@@ -58,6 +60,7 @@ export const Row = styled.div`
   flex-direction: row;
   justify-content: center;
 `;
+
 export const Column = styled.div`
   /* border: solid 1px black; */
   display: inherit;
@@ -112,8 +115,8 @@ export const ButtonPrimary = styled.button`
   /* identical to box height */
   text-align: center;
   color: #FFFFFF;
-
 `;
+
 export const ButtonSecondary = styled.button`
   width: 120px;
   height: 60px;
@@ -131,8 +134,6 @@ export const ButtonSecondary = styled.button`
   color: #1526FF;
 `;
 
-
-
 export const InputContent = styled.div`
   display: inherit;
   flex-direction: column;
@@ -140,8 +141,8 @@ export const InputContent = styled.div`
   margin-top: 30px;
   width: 100%;
 
-  overflow: scroll;
-  height: 40vh;
+  /* overflow: scroll;
+  height: 40vh; */
 `;
 
 export const InputGroup = styled.div`
@@ -157,10 +158,11 @@ export const Label = styled.label`
   line-height: 21px;
   color: #000000;
 `;
+
 export const Input = styled.input`
   border: 2px solid #000000;
   border-radius: 4px;
-  height: 70px;
+  height: 60px;
   padding-left: 1rem;
 
   &::-webkit-input-placeholder { /* Edge */

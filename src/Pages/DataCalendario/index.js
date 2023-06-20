@@ -7,6 +7,7 @@ import Content from "../../Components/Content";
 
 
 import * as S from '../../Components/styles/styles';
+import * as C from './styles';
 
 export default function DataCalendario() {
   const navigate = useNavigate();
@@ -42,39 +43,19 @@ export default function DataCalendario() {
           <S.Title>Escolha uma data para seu agendamento:</S.Title>
         </S.Row>
         <S.Row>
-          <S.InputContent>
+          <C.InputContent>
             {datasAtuais.map(e => {
               return (
                 <S.InputGroup key={e}>
-                  
-                  <S.Input type="check" name="data" placeholder={new Date(e).toLocaleDateString()} readOnly />
+                  <S.Input type="check" name="data" placeholder={new Date(e).toLocaleDateString()} readOnly 
+                    style={{
+                      textAlign: 'center',
+                    }}
+                  />
                 </S.InputGroup>
               )
             })}
-            {/* <S.InputGroup>
-              <S.Input type="check" name="data" placeholder="26/02/2024" readOnly />
-            </S.InputGroup>
-
-            <S.InputGroup>
-              <S.Input type="check" name="data" placeholder="26/02/2024" readOnly />
-            </S.InputGroup>
-
-            <S.InputGroup>
-              <S.Input type="check" name="data" placeholder="26/02/2024" readOnly />
-            </S.InputGroup>
-
-            <S.InputGroup>
-              <S.Input type="check" name="data" placeholder="26/02/2024" readOnly />
-            </S.InputGroup>
-
-            <S.InputGroup>
-              <S.Input type="check" name="data" placeholder="26/02/2024" readOnly />
-            </S.InputGroup>
-
-            <S.InputGroup>
-              <S.Input type="check" name="data" placeholder="26/02/2024" readOnly />
-            </S.InputGroup> */}
-          </S.InputContent>
+          </C.InputContent>
         </S.Row>
       </Content>
 

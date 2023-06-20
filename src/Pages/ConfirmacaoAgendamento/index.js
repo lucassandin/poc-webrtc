@@ -32,7 +32,7 @@ export default function ConfirmacaoAgendamento() {
         </S.Row>
         <S.Row>
           <S.Span>
-            Seu agendamento está marcado para dia 26/02/2023 as 13:30.
+            Seu agendamento está marcado para dia <b>26/02/2023</b> as <b>13:30</b>.
           </S.Span>
         </S.Row>
       </Content>

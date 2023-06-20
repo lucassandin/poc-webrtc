@@ -99,7 +99,7 @@ export default function DocumentoVisaoGeral() {
           </S.Column>
           <S.Column>
             <S.ButtonPrimary
-              onClick={() => navigate(`/agendamento/documentos-recebidos`)}
+              onClick={() => navigate(`/agendamento/confirmacao-agendamento`)}
             >
               Enviar
             </S.ButtonPrimary>

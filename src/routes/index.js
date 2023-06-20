@@ -23,7 +23,7 @@ const RecomendacaoAnexo = lazy(() => import("../Pages/RecomendacaoAnexo"));
 const AnexoDocumentoFrente = lazy(() => import("../Pages/AnexoDocumentoFrente"));
 const AnexoDocumentoVerso = lazy(() => import("../Pages/AnexoDocumentoVerso"));
 const DocumentoVisaoGeral = lazy(() => import("../Pages/DocumentoVisaoGeral"));
-const DocumentosRecebidos = lazy(() => import("../Pages/DocumentosRecebidos"));
+// const DocumentosRecebidos = lazy(() => import("../Pages/DocumentosRecebidos"));
 const ConfirmacaoAgendamento = lazy(() => import("../Pages/ConfirmacaoAgendamento"));
 const Orientacoes = lazy(() => import("../Pages/Orientacoes"));
 const TesteConexao = lazy(() => import("../Pages/TesteConexao"));
@@ -57,7 +57,7 @@ const RoutesComponent = () => {
               <Route path="/agendamento/documento-frente" element={<AnexoDocumentoFrente />} />
               <Route path="/agendamento/documento-verso" element={<AnexoDocumentoVerso />} />
               <Route path="/agendamento/documento-visao-geral" element={<DocumentoVisaoGeral />} />
-              <Route path="/agendamento/documentos-recebidos" element={<DocumentosRecebidos />} />
+              {/* <Route path="/agendamento/documentos-recebidos" element={<DocumentosRecebidos />} /> */}
               <Route path="/agendamento/confirmacao-agendamento" element={<ConfirmacaoAgendamento />} />
 
               <Route path="/atendimento/orientacoes" element={<Orientacoes />} />

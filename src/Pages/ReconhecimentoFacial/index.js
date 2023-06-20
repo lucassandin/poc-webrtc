@@ -6,7 +6,7 @@ import "react-html5-camera-photo/build/css/index.css";
 
 import Content from "../../Components/Content";
 
-import faceShape from "../../Assets/combined-shape.svg";
+import faceShape from "../../Assets/shape/rosto.svg";
 import * as S from "../../Components/styles/styles";
 
 export default function ReconhecimentoFacial() {
