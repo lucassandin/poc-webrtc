@@ -3,6 +3,7 @@ import { useNavigate  } from 'react-router-dom'
 import { useNavigateContext } from "../../Context/NavigateContext";
 
 import setaVoltar from "../../Assets/icons/arrow-back-white.svg";
+import cross from "../../Assets/icons/cross.svg";
 import logoAzul from "../../Assets/logo-mercantil-oficial.svg";
 import logoBranca from "../../Assets/logo.svg";
 import * as S from '../../Components/styles/styles';
@@ -24,7 +25,11 @@ export default function Header() {
               <S.ButtonBack onClick={() => navigate(-1)}>
                 <img src={setaVoltar} alt="Voltar" />
               </S.ButtonBack>
-            ) : <></>}
+            ) : (
+              <S.ButtonBack onClick={() => navigate(-1)}>
+                <img src={cross} alt="Voltar" width={"12"} height={"12"} />
+              </S.ButtonBack>
+            )}
           </div>
         </S.Column>
 

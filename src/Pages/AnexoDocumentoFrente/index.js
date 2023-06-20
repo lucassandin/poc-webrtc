@@ -25,7 +25,7 @@ export default function AnexoDocumentoFrente() {
   }
 
   useEffect(() => {
-    setHeaderBack(true)
+    setHeaderBack(false)
     setIsOverlay("true")
     setBackgroundColor("false");
     setTitleHeader("Frente do documento")

@@ -29,7 +29,7 @@ export default function ReconhecimentoFacial() {
   }
 
   useEffect(() => {
-    setHeaderBack(true);
+    setHeaderBack(false);
     setIsOverlay("true");
     setBackgroundColor("false");
     setTitleHeader("Validação facial");

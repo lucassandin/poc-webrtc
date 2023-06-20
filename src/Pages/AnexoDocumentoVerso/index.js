@@ -25,7 +25,7 @@ export default function AnexoDocumentoVerso() {
   }
 
   useEffect(() => {
-    setHeaderBack(true)
+    setHeaderBack(false)
     setIsOverlay("true")
     setBackgroundColor("false");
     setTitleHeader("Verso do documento")
