@@ -37,10 +37,26 @@ export default function Home() {
       <Footer>
         <S.Row>
           <S.Column>
-            <S.ButtonSecondary onClick={() => navigate("/atendimento/orientacoes")}>Já agendei</S.ButtonSecondary>
-          </S.Column>
-          <S.Column>
-            <S.ButtonPrimary fullwidth={"true"} onClick={() => navigate("/agendamento/titular-beneficiario")}>Primeiro acesso</S.ButtonPrimary>
+            <div style={{
+              display: 'flex',
+              gap: '20px',
+            }}>
+            <S.ButtonSecondary 
+              style={{
+                width: '120px',
+              }}
+              onClick={() => navigate("/atendimento/orientacoes")}>
+                Já agendei
+            </S.ButtonSecondary>
+            <S.ButtonPrimary 
+              style={{
+                width: '180px',
+              }}
+              fullwidth={"true"} 
+              onClick={() => navigate("/agendamento/titular-beneficiario")}>
+              Primeiro acesso
+            </S.ButtonPrimary>
+          </div>
           </S.Column>
         </S.Row>
       </Footer>

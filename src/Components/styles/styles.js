@@ -119,7 +119,7 @@ export const ButtonPrimary = styled.button`
 `;
 
 export const ButtonSecondary = styled.button`
-  width: 120px;
+  width: 157px;
   height: 60px;
 
   border: 1px solid #A5A5A5;
