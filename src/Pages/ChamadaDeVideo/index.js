@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import { useNavigateContext } from "../../Context/NavigateContext";
 
@@ -6,9 +6,11 @@ import '@vonage/video-publisher/video-publisher.js';
 import '@vonage/video-subscribers/video-subscribers.js';
 import '@vonage/screen-share/screen-share.js';
 
-import video from "../../Assets/video.png";
-import microfone from "../../Assets/microfone.png";
-import encerrar from "../../Assets/encerrar-chamada.png";
+import video from "../../Assets/icons/can.svg";
+import videoMute from "../../Assets/icons/can-mut.svg";
+import microfone from "../../Assets/icons/dic.svg";
+import microfoneMute from "../../Assets/icons/mic-mut.svg";
+import encerrar from "../../Assets/icons/desligar.svg";
 
 import FooterVideo from "../../Components/FooterVideo";
 import Content from "../../Components/Content";
@@ -21,7 +23,10 @@ import './style.css';
 export default function ChamadaDeVideo() {
   const navigate = useNavigate();
   const { setHeaderBack, setIsOverlay, setBackgroundColor } = useNavigateContext();
-  
+
+  const [micButton, setMicButton] = useState(false);
+  const [videoButton, setVideoButton] = useState(false);
+
   useEffect(() => {
     setHeaderBack(true)
     setIsOverlay("true")
@@ -31,7 +36,7 @@ export default function ChamadaDeVideo() {
       setIsOverlay("false")
     }
   })
-  
+
   // Get references to Web Components
   const publisher = useRef(null);
   const subscribers = useRef(null);
@@ -44,10 +49,12 @@ export default function ChamadaDeVideo() {
 
   const toggleVideo = () => {
     publisher.current.toggleVideo();
+    setVideoButton(!videoButton)
   };
 
   const toggleAudio = () => {
     publisher.current.toggleAudio();
+    setMicButton(!micButton)
   };
 
   useEffect(() => {
@@ -72,35 +79,44 @@ export default function ChamadaDeVideo() {
   });
 
   return (
-  //     {/* <screen-share start-text="start" stop-text="stop" width="300px" height="240px" ref={screenshare}></screen-share> */}
-  <>
-    {/* central content */}
-    <Content>
-      <S.Row>
-        <video-subscribers 
-          ref={subscribers}
+    //     {/* <screen-share start-text="start" stop-text="stop" width="300px" height="240px" ref={screenshare}></screen-share> */}
+    <>
+      {/* central content */}
+      <Content>
+        <S.Row>
+          <video-subscribers
+            ref={subscribers}
           ></video-subscribers>
-      </S.Row>
-    </Content>
+        </S.Row>
+      </Content>
 
-    {/* footer content */}
-    <FooterVideo>
-      <S.Row>
-        <video-publisher 
-          ref={publisher}
-        >
-        </video-publisher>
-      </S.Row>
-      <S.Row>
-        <S.Column>
-          <SS.ButtonGroup>
-            <SS.ButtonMedia onClick={toggleAudio}><img src={microfone} alt="Microfone" /></SS.ButtonMedia>
-            <SS.ButtonMedia  onClick={() => navigate("/atendimento/assinatura")}><img src={encerrar} alt="Encerrar" /></SS.ButtonMedia>
-            <SS.ButtonMedia onClick={toggleVideo}><img src={video} alt="Vídeo" /></SS.ButtonMedia>
-          </SS.ButtonGroup>
-        </S.Column>
-      </S.Row>
-    </FooterVideo>
-  </>
+      {/* footer content */}
+      <FooterVideo>
+        <S.Row>
+          <video-publisher
+            ref={publisher}
+          >
+          </video-publisher>
+        </S.Row>
+        <S.Row>
+          <S.Column>
+            <SS.ButtonGroup>
+              <SS.ButtonMedia onClick={toggleAudio}>
+                {micButton ? (<img src={microfoneMute} alt="Microfone" />) : (<img src={microfone} alt="Microfone" />)}
+              </SS.ButtonMedia>
+              <div style={{
+                display: 'flex',
+                gap: '10vw',
+              }}>
+              <SS.ButtonMedia onClick={toggleVideo}>
+                {videoButton ? (<img src={videoMute} alt="Vídeo" />) : (<img src={video} alt="Vídeo" />)}
+              </SS.ButtonMedia>
+                <SS.ButtonMedia onClick={() => navigate("/atendimento/assinatura")}><img src={encerrar} alt="Encerrar" /></SS.ButtonMedia>
+              </div>
+            </SS.ButtonGroup>
+          </S.Column>
+        </S.Row>
+      </FooterVideo>
+    </>
   );
 }

@@ -96,3 +96,8 @@ li {
   background: #1526FF;
   color: #ffffff;
 }
+
+
+.OT_mini .OT_mute.OT_mode-on, .OT_mini:hover .OT_mute.OT_mode-auto, .OT_mute.OT_mode-mini, .OT_root:hover .OT_mute.OT_mode-mini-auto {
+  display: none !important;
+}
