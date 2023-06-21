@@ -45,7 +45,7 @@ export default function TesteConexao() {
       <Footer>
         <S.Row>
           <S.Column>
-            <S.ButtonPrimary fullwidth="true"  onClick={() => navigate("/atendimento/validar-conexao/verificando")}>Estou pronto</S.ButtonPrimary>
+            <S.ButtonPrimary fullwidth="true"  onClick={() => navigate("/atendimento/validar-conexao/verificando")}>Estou pronto(a)</S.ButtonPrimary>
           </S.Column>
         </S.Row>
       </Footer>

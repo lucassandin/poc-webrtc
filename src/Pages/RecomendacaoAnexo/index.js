@@ -61,7 +61,7 @@ export default function RecomendacaoAnexoDocumento() {
               fullwidth="true"
               onClick={() => navigate("/agendamento/documento-frente")}
             >
-              Estou pronto
+              Estou pronto(a)
             </S.ButtonPrimary>
           </S.Column>
         </S.Row>

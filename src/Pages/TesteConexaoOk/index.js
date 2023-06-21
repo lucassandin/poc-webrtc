@@ -46,7 +46,7 @@ export default function TesteConexaoOk() {
               fullwidth="true"
               onClick={() => navigate("/chamada-de-video")}
             >
-              Estou pronto
+              Estou pronto(a)
             </S.ButtonPrimary>
           </S.Column>
         </S.Row>
