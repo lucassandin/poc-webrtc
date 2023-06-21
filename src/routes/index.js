@@ -62,9 +62,9 @@ const RoutesComponent = () => {
 
               <Route path="/atendimento/orientacoes" element={<Orientacoes />} />
               <Route path="/atendimento/reconhecimento-facial" element={<ReconhecimentoFacial />} />
-              <Route path="/atendimento/testeconexao" element={<TesteConexao />} />
-              <Route path="/atendimento/testeconexaoverificando" element={<TesteConexaoVerificando />} />
-              <Route path="/atendimento/testeconexaook" element={<TesteConexaoOk />} />
+              <Route path="/atendimento/validar-conexao" element={<TesteConexao />} />
+              <Route path="/atendimento/validar-conexao/verificando" element={<TesteConexaoVerificando />} />
+              <Route path="/atendimento/validar-conexao/ok" element={<TesteConexaoOk />} />
               <Route path="/atendimento/assinatura" element={<Assinatura />} />
               <Route path="/atendimento/finalizado" element={<Finalizado />} />
 

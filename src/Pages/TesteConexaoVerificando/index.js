@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useNavigateContext } from "../../Context/NavigateContext";
-import { useNavigate } from "react-router-dom";
+import LinearWithValueLabel from "../../Components/ProgressBar";
 
 import verificandoConexao from "../../Assets/verificando-conexao.svg";
 
@@ -11,7 +11,6 @@ import * as S from "../../Components/styles/styles";
 import * as SS from "./styles";
 
 export default function TesteConexaoVerificando() {
-  const navigate = useNavigate();
   const { setHeaderBack, setBackgroundColor  } = useNavigateContext();
 
   useEffect(() => {
@@ -45,7 +44,8 @@ export default function TesteConexaoVerificando() {
       <Footer>
         <S.Row>
           <S.Column>
-            <S.ButtonPrimary fullwidth="true"  onClick={() => navigate("/atendimento/testeconexaook")}>Continuar</S.ButtonPrimary>
+            <LinearWithValueLabel />
+            {/* <S.ButtonPrimary fullwidth="true"  onClick={() => navigate("/atendimento/validar-conexao/ok")}>Continuar</S.ButtonPrimary> */}
           </S.Column>
         </S.Row>
       </Footer>

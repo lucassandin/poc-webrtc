@@ -16,7 +16,7 @@ export default function ReconhecimentoFacial() {
 
   const handleNavigate = () => {
     if (location.pathname === "/atendimento/reconhecimento-facial") {
-      navigate("/atendimento/testeconexao");
+      navigate("/atendimento/validar-conexao");
     } else {
       navigate("/agendamento/recomendacao-anexo");
     }
